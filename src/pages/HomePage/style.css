@@ -1,0 +1,85 @@
+ 
+
+.style {
+    color: red;
+}
+.carousel-prev:before {
+    background-image: url(../../images/linija1.png);
+    pointer-events: auto;
+}
+  button.carousel-arrow.block.carousel-prev::before{
+    background-image: url(../../images/linija1.png);
+    width: 30px;
+    height: 25px;
+    position: relative;
+    pointer-events: auto;
+    
+  }
+  
+  
+  button.carousel-arrow.block.carousel-prev{
+      height: 35px;
+      width: 35px;
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      border-radius: 50%;
+      background: rgba(3, 3, 3, 0.6);
+      pointer-events: auto;
+      z-index: 55!important;
+    }
+
+    button.carousel-arrow.block.carousel-prev:hover{
+        background: black;
+    }
+ 
+
+    .carousel-next:before {
+        background-image: url(../../images/linija2.png);
+        pointer-events: auto;
+    }
+      button.carousel-arrow.block.carousel-next::before{
+        background-image: url(../../images/linija2.png);
+        width: 30px;
+        height: 25px;
+        position: relative;
+        pointer-events: auto;
+        
+      }
+      
+      
+      button.carousel-arrow.block.carousel-next{
+          height: 35px;
+          width: 35px;
+          position: absolute;
+          top: 50%;
+          right: 20px;
+          border-radius: 50%;
+          background: rgba(3, 3, 3, 0.6);
+          pointer-events: auto;
+          z-index: 55!important;
+        }
+    
+        button.carousel-arrow.block.carousel-next:hover{
+            background: black;
+        }
+ 
+ 
+.carousel-item:nth-child(1){
+    z-index: 5!important;
+     
+}
+
+.carousel-item:nth-child(2){
+        
+    z-index: 2!important;
+    overflow: hidden;
+}
+
+.carousel-item:nth-child(3){
+        overflow: hidden;
+    z-index: 2!important;
+    
+}
+
+ 
