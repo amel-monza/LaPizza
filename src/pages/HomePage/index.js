@@ -4,7 +4,9 @@ import Slider from 'infinite-react-carousel';
 import styles from './styles.module.scss';
 import './style.css'
 import logo from '../../images/logo.jpg'
- 
+import logo2 from '../../images/logo2.png'
+import pizza from '../../images/pizza.png'
+import pizza2 from '../../images/pizza2.png'
 
 export const HomePage = () => {
   const { getUser, user, loading } = useUser();
@@ -28,7 +30,7 @@ export const HomePage = () => {
   
   <div className={styles.divKlas}>
     <header className={styles.parent}>
-      <img src={logo}/>
+      <img src={logo2}/>
       <nav>
         <ul className={styles.UL}>
           <li><a href="g">Мени</a></li>
@@ -130,12 +132,47 @@ export const HomePage = () => {
 
 
 
-<div>lorem55555555555555555555555555555555555555555555555555555555555555555555555555555555555 zlorem55555555555555555555555555555555555555555555555555555555555555555555555555555555555 zlorem55555555555555555555555555555555555555555555555555555555555555555555555555555555555 zlorem55555555555555555555555555555555555555555555555555555555555555555555555555555555555 zlorem55555555555555555555555555555555555555555555555555555555555555555555555555555555555 zlorem55555555555555555555555555555555555555555555555555555555555555555555555555555555555 zlorem55555555555555555555555555555555555555555555555555555555555555555555555555555555555 zlorem55555555555555555555555555555555555555555555555555555555555555555555555555555555555 zlorem55555555555555555555555555555555555555555555555555555555555555555555555555555555555 zlorem55555555555555555555555555555555555555555555555555555555555555555555555555555555555 zlorem55555555555555555555555555555555555555555555555555555555555555555555555555555555555 zlorem55555555555555555555555555555555555555555555555555555555555555555555555555555555555 zlorem55555555555555555555555555555555555555555555555555555555555555555555555555555555555 zlorem55555555555555555555555555555555555555555555555555555555555555555555555555555555555 zlorem55555555555555555555555555555555555555555555555555555555555555555555555555555555555 zlorem55555555555555555555555555555555555555555555555555555555555555555555555555555555555 z</div>
- 
- <div className={styles.container}>
-   <span className={styles.text1}>Dobredojdovte</span>
-   <span className={styles.text2}> vo LaPizza</span>
+  
+ <div className={styles.ChapterTwo}>
+ <div className={styles.first}>
+   <img src={pizza}/>
+   <span className={styles.peperoni}>Пеперони</span>
+   <span className={styles.Span2}>Доматен сос, кашкавал, кулен</span>
+   <div className={styles.div3}>
+     <span className={styles.Span3}>
+       220ден
+     </span>
+     <span className={styles.Span4}>
+       370ден
+     </span>
+     
+   </div>
+   <div className={styles.div4}>
+   <span className={styles.Span5}>Фамилијарна 40cm</span>
+   <span className={styles.Span6}>Средна 30cm</span>
+   </div>
+ </div>  
+ <div className={styles.first}>
+   <img src={pizza2}/>
+   <span className={styles.peperoni}>Туна</span>
+   <span className={styles.Span2}>Доматен сос, кашкавал, туна, маслинки, печурки, рукола, пченка</span>
+   <div className={styles.div3}>
+     <span className={styles.Span3}>
+       250ден
+     </span>
+     <span className={styles.Span4}>
+       460ден
+     </span>
+     
+   </div>
+   <div className={styles.div4}>
+   <span className={styles.Span5}>Фамилијарна 40cm</span>
+   <span className={styles.Span6}>Средна 30cm</span>
+   </div>
+ </div>   
+   
  </div>
+ 
  
 
   </>
