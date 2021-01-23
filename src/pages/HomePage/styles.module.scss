@@ -358,14 +358,14 @@ margin-bottom: 100px;
     .eachSlide1{
      
       background-image:url("../../images/LaPizza3.png");
-      background-color: transparent;
-      background-repeat: no-repeat;
- z-index: -1;
-       
-      background-position: right center;
+      
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-position: 50% 50%;
        width: 110%;
       height: 100vh;
-      
+      background-size: cover;
       opacity: 1;
       transform: translate(0, 0px);
       animation: left 12s linear 10ms 6;
@@ -379,7 +379,8 @@ margin-bottom: 100px;
       
        
       .test{
-        
+        height: 100vh;
+        width: 100%;
         
         opacity: 1;
         
@@ -398,14 +399,13 @@ margin-bottom: 100px;
       .eachSlide2{
        width: 120%;
         background-image:url("../../images/LaPizza2.jpg");
-        background-color: transparent;
-        background-repeat: no-repeat;
-   z-index: -1;
-   left: 0;
-        background-position: left center;
-         
-        height: 100vh;
-       position: relative;
+        position: absolute;
+      top: 0;
+      left: 0;
+      background-position: 50% 50%;
+        
+      height: 100vh;
+      background-size: cover;
         
         opacity: 1;
         transform: translate(0, 0px);
@@ -734,8 +734,8 @@ margin-bottom: 100px;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  height: 1000px;
-  margin-top: 200px;
+  height: 1900px;
+  margin-top: 100px;
   text-align: center; 
    
    
@@ -851,3 +851,245 @@ margin-bottom: 100px;
   align-items: center;
   justify-content: center;
 }
+
+
+
+
+
+
+
+
+.ZostoLa{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 70px;
+  text-align: center; 
+}
+
+
+.ZostoLaTekst {
+     
+          font-size: 55px;
+         
+          
+          font-family: 'Montserrat', sans-serif;
+       
+}
+
+.Sostojki {
+  width: 100%;
+  margin-top: 80px;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+   
+}
+
+
+.SostojkiDiv{
+   width: 335px;
+   margin-right: 35px;
+   img {
+    margin-bottom: 10px;
+  }
+}
+
+.DostavaDiv{
+  width: 335px;
+  margin-left: 35px;
+  margin-right: 35px;
+  img {
+    margin-bottom: 10px;
+  }
+}
+
+.FamilyDiv{
+  width: 335px;
+  margin-left: 35px;
+
+  img {
+    margin-bottom: 10px;
+  }
+}
+
+.SostojkiDef{
+  width: 335px;
+  text-align: left;
+  margin-top: 10px;
+}
+.SostojkiSpan {
+ 
+font-size: 16px;
+ 
+font-family: 'Montserrat', sans-serif;
+color: rgb(97, 96, 96);
+}
+
+.SostojkiNaslov {
+  
+  font-size: 22px;
+ 
+font-family: 'Montserrat', sans-serif;
+color: rgb(3, 202, 202);
+}
+
+.ZostoContainer {
+  height: 400px;
+  width: 45%;
+  margin-left: 20px;
+  
+    text-align: left;
+   
+}
+
+
+.Conta {
+  width: 100%;
+   
+ text-align: center;
+}
+
+.Contas {
+  width: 100%;
+   margin-bottom: 30px;
+  text-align: center;
+}
+
+ 
+.mushroom {
+  position: absolute;
+  right: 0;
+  margin-top: -100px;
+}
+
+
+.tomato {
+  position: absolute;
+  left: 0;
+  margin-top: -100px;
+}
+ 
+
+.garlic {
+  position: absolute;
+  left: 0;
+  margin-top: 450px;
+}
+
+.lettuce {
+  position: absolute;
+  right: 0;
+  margin-top: 450px;
+}
+ 
+
+ .Klienti {
+    
+  height: 360px;
+   
+   
+  
+   text-align: center;
+   justify-content: center;
+   position: relative;
+ }
+
+ .Back {
+  background-image: url('../../images/image.png');
+  height: 400px;
+  pointer-events: none;
+  background-size: cover;
+  background-position: 50%;
+  padding: 20px;
+  margin-top: 130px;
+  position: relative;
+ }
+
+ .Vpecatoci {
+   color: white;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 55px;
+   position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+   
+ }
+
+ .LaPizzaFb{
+   height: 50px;
+   width: 50px;
+   margin: 0 auto;
+   display: flex;
+   position: absolute;
+   top: 28%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ text-align: center;
+  
+   a{
+     pointer-events: auto;
+     display: block;
+     width: 50px;
+     height: 50px;
+     position: absolute;
+   }
+   
+   img {
+     height: 50px;
+     width: 50px;
+     position: absolute;
+   }
+ }
+
+
+ .Opis {
+   font-size: 22px;
+   font-family: 'Montserrat', sans-serif;
+   color: rgb(3, 202, 202);
+   position: absolute;
+   top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ text-align: center;
+ width: 90%;
+   font-style: italic;
+   
+ }
+
+
+ .Stars {
+   width: 150px;
+   height: 25px;
+   position: absolute;
+   top: 75%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ text-align: center;
+ 
+ }
+
+ .Nickname {
+  position: absolute;
+  top: 85%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+width: 100%;
+color:white;
+font-size: 22px;
+ }
+
+ .Footer {
+   background: grey;
+   width: 100%;
+   height: 300px;
+   margin-top: 100px;
+ }
+
