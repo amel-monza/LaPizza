@@ -266,7 +266,7 @@ export const HomePage = () => {
                   <a
                     href="https://www.facebook.com/permalink.php?story_fbid=146958336732266&id=100042543022352"
                     target="_blank"
-                   /> 
+                  /> 
                 </div>
                 <span className={styles.Opis}>"Одличен вкус со уште по прифатливи цени за обемот и исполнетоста на пиците и пастрмајлиите. Брза достава и љубезност од истата. Браво."</span>
                 <img
@@ -291,7 +291,7 @@ export const HomePage = () => {
                   <a
                     href="https://www.facebook.com/DuleAeroporto/posts/10216959615606614"
                     target="_blank"
-                   /> 
+                  /> 
                 </div>
                 <span className={styles.Opis}>"Одлична услуга, љубезен персонал и пристојни цени. Keep it going!"</span>
                 <img
@@ -315,7 +315,7 @@ export const HomePage = () => {
                   <a
                     href="https://www.facebook.com/druid.mali/posts/10205978209730928"
                     target="_blank"
-                   /> 
+                  /> 
                 </div>
                 <span className={styles.Opis}>"Предобра пица, луѓето фини, брза достава, секоја чест."</span>
                 <img
@@ -332,7 +332,7 @@ export const HomePage = () => {
         </div>
         <div className={styles.Footer} />
        
-        {/*    
+        
  <div className={styles.first}>
    <img src={pizza}/>
    <span className={styles.peperoni}>Пеперони</span>
@@ -368,7 +368,7 @@ export const HomePage = () => {
    <span className={styles.Span5}>Фамилијарна 40cm</span>
    <span className={styles.Span6}>Средна 30cm</span>
    </div>
- </div>    */}
+ </div>   
    
       </div>
 
