@@ -13,15 +13,15 @@ const App = () => (
       <Switch>
         <Route
           exact
-          path={HOME_PAGE}
+          path="/"
           component={HomePage}
         />
         <Route
           exact
-          path={MENU}
+          path="/menu"
           component={Menu}
         />
-         
+         <Redirect to="/"/>
       </Switch>
     </Provider>
   </Router>
