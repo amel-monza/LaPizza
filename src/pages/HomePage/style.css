@@ -83,34 +83,34 @@
 }
 
 ul.carousel-dots .carousel-dots-active.carousel-dot-1 button::before{
-    color: white;
+     
     
 }
 
 ul.carousel-dots .carousel-dot-1 button::before{
-    color: white;
+    
 }
 
 ul.carousel-dots .carousel-dot-2 button::before{
-    color: white;
+    
 }
 
 ul.carousel-dots .carousel-dot-3 button::before{
-    color: white;
+    
 }
 
 ul.carousel-dots .carousel-dots-active.carousel-dot-1 button::before{
-    color: white;
+    
     opacity: 1;
 }
 
 ul.carousel-dots .carousel-dots-active.carousel-dot-2 button::before{
-    color: white;
+    
     opacity: 1;
 }
 
 ul.carousel-dots .carousel-dots-active.carousel-dot-3 button::before{
-    color: white;
+    
     opacity: 1;
 }
 

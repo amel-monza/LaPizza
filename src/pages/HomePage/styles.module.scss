@@ -862,28 +862,36 @@ margin-bottom: 100px;
 
 .ZostoLa{
   width: 100%;
-  justify-content: center;
-  align-items: center;
+   
   margin: 0 auto;
   display: flex;
   margin-top: 70px;
-  text-align: center; 
+
 }
 
+
+.ZsLa {
+  width:80%;
+  margin: 0 auto;
+  display: flex;
+  text-align: center; 
+  justify-content: space-between;
+}
 
 .ZostoLaTekst {
      
           font-size: 55px;
-         
+          margin: 0 auto;
           
           font-family: 'Montserrat', sans-serif;
        
 }
 
 .Sostojki {
-  width: 100%;
+  width: 80%;
   margin-top: 80px;
-  justify-content: center;
+  margin: 0 auto;
+  justify-content: space-between;
   text-align: center;
   position: relative;
   display: flex;
@@ -892,33 +900,36 @@ margin-bottom: 100px;
 
 
 .SostojkiDiv{
-   width: 335px;
-   margin-right: 35px;
+   width: 30%;
+    
    img {
-    margin-bottom: 10px;
+    width: 100%;
+    height: 266px;
+
   }
 }
 
 .DostavaDiv{
-  width: 335px;
-  margin-left: 35px;
-  margin-right: 35px;
+  width: 30%;
+   
   img {
-    margin-bottom: 10px;
+   width: 100%;
+   height: 266px;
   }
 }
 
 .FamilyDiv{
-  width: 335px;
-  margin-left: 35px;
+  width: 30%;
+  
 
   img {
-    margin-bottom: 10px;
+   width: 100%;
+   height: 266px;
   }
 }
 
 .SostojkiDef{
-  width: 335px;
+  width: 100%;
   text-align: left;
   margin-top: 10px;
 }
@@ -939,11 +950,10 @@ color: rgb(3, 202, 202);
 }
 
 .ZostoContainer {
-  height: 400px;
-  width: 45%;
-  margin-left: 20px;
-  
-    text-align: left;
+  justify-content: center;
+  height: 450px;
+  margin-left: 30px;
+  text-align: left;
    
 }
 
@@ -991,8 +1001,8 @@ color: rgb(3, 202, 202);
  .Klienti {
     
   height: 360px;
-   
-   
+   width: 80%;
+   margin: 0 auto;
   
    text-align: center;
    justify-content: center;
@@ -1000,18 +1010,18 @@ color: rgb(3, 202, 202);
  }
 
  .Back {
-  background-image: url('../../images/image.png');
+  background-image: url('../../images/quote.png');
   height: 400px;
   pointer-events: none;
   background-size: cover;
   background-position: 50%;
-  padding: 20px;
+  padding: 20px 0;
   margin-top: 130px;
   position: relative;
  }
 
  .Vpecatoci {
-   color: white;
+    
    font-family: 'Montserrat', sans-serif;
    font-size: 55px;
    position: absolute;
@@ -1059,7 +1069,7 @@ color: rgb(3, 202, 202);
  left: 50%;
  transform: translate(-50%, -50%);
  text-align: center;
- width: 90%;
+ width: 100%;
    font-style: italic;
    
  }
@@ -1083,14 +1093,119 @@ left: 50%;
 transform: translate(-50%, -50%);
 text-align: center;
 width: 100%;
-color:white;
+ 
 font-size: 22px;
  }
 
-//  .Footer {
-//    background: grey;
-//    width: 100%;
-//    height: 300px;
-//    margin-top: 100px;
-//  }
+ .Footer {
+   background: grey;
+   width: 100%;
+   text-align:center;
+   background:rgb(49, 44, 43);
+   margin-top: 50px;
+   height: 530px;
+   position: relative;
+   padding: 40px 10px;
+   border-bottom: 1px solid rgb(71, 71, 71);
+ }
 
+
+ .GoogleMap{
+   width: 50%;
+   display: inline-block;
+   
+   height: 450px;
+   vertical-align: top;
+ }
+
+ .Kontakt {
+   width: 50%;
+  position: relative;
+   vertical-align: middle;
+   display: inline-block;
+   text-align: left;
+    height: 450px;
+
+   .Navigacija{
+    width: 50%;
+    display: inline-block;
+    padding: 0 0 0 80px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    p {
+     color: rgb(3, 202, 202);
+     padding: 30px 0 0 0;
+     font-size: 18px;
+    }
+    h2{
+      font-size: 28px;
+     color: white;
+     font-family: 'Montserrat', sans-serif;
+    }
+     
+   }
+
+
+   .Konts {
+     width: 50%;
+     display: inline-block;
+     right: 0;
+     padding: 0 0 0 60px;
+     top: 0;
+     position: absolute;
+
+     a {
+    color: white;
+     margin-top: 30px;
+    margin-right: 30px;
+      display: inline-block;
+      width: 50px;
+      
+       
+      
+    }
+
+    a:hover{
+      color:rgb(3, 202, 202);
+      transition: 0.2s;
+      cursor: pointer;
+    }
+     h2{
+      font-size: 28px;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+     }
+
+     p {
+      color: white;
+      padding: 30px 0 0 0;
+      font-size: 18px;
+
+      cv{
+        color: rgb(3, 202, 202);
+      }
+  
+      
+     }
+   }
+ }
+
+
+ .inline {
+   position: relative;
+  margin: 0 auto;
+  width: 990px;
+ }
+
+ 
+ .Rights {
+   width: 100%;
+   height: 40px;
+   line-height: 40px;
+   color: white;
+   text-align: center;
+   background: #312c2b;
+   font-size: 15px;
+    
+ }
