@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { store } from 'store';
 import { HomePage } from 'pages/HomePage';
-import { HOME_PAGE } from 'global/routes';
-import { MENU } from 'global/routes';
+import { HOME_PAGE, MENU } from 'global/routes';
+
 import { Provider } from 'react-redux'; 
-import { Menu} from 'pages/Menu/menu';
+import { Menu } from 'pages/Menu/menu';
 
 const App = () => (
   <Router>
@@ -16,7 +16,7 @@ const App = () => (
           path={HOME_PAGE}
           component={HomePage}
         />
-         <Route
+        <Route
           exact
           path={MENU}
           component={Menu}
