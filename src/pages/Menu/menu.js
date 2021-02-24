@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo2 from '../../images/logo2.png';
 import pizza from '../../images/pizza.png';
 import pizza2 from '../../images/pizza2.png';
@@ -10,11 +10,160 @@ import kratovska from '../../images/kratovska.png';
 import veleska from '../../images/veleska.png';
 import skopska from '../../images/skopska.png';
 import styles from './styles.module.scss';
+import styled from 'styled-components';
+import Menuprintpizza from './print/menuprintpizza';
+import Menuprintpastr from './print/menuprintpastr';
 
-export const Menu = () => (
 
-  <div className={styles.Container}>
+
+export const Menu = () => { 
+
+
+
+  const [state,setState] = useState({
+    isNavBarOpen: false,
+  })
+  
+  const OpenCloseNavbar = () => {
+    setState({isNavBarOpen: !state.isNavBarOpen})
+    
+  }
+  
+  const StyledHamb = styled.div`
+  width: 30px;
+  height: 22.5px;
+  padding: 1rem;
+  
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  pointer-events: auto;
+  
+  
+  
+    z-index: 59 !important;
+    position: fixed;
+     
+    
+     
+    right: 20px;
+    
+    text-align: center;
+    top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    background: transparent;
+    
+  
+  & span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background:  rgb(3, 202, 202); 
+    border-radius: 5px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+  
+    &:nth-child(1) {
+      top: ${state.isNavBarOpen ? '9px' : '0px'};
+      width: ${state.isNavBarOpen ? '0%' : '100%'};
+      left: ${state.isNavBarOpen ? '50%' : null};
+    }
+  
+    &:nth-child(2) {
+      transform: ${state.isNavBarOpen ? 'rotate(45deg)' : null};
+    }
+  
+    &:nth-child(3) {
+      transform: ${state.isNavBarOpen ? 'rotate(-45deg)' : null};
+    }
+  
+    &:nth-child(2),
+    &:nth-child(3) {
+      top: 9px;
+    }
+  
+    &:nth-child(4) {
+      top: ${state.isNavBarOpen ? '9px' : '18px'};
+      width: ${state.isNavBarOpen ? '0%' : '100%'};
+      left: ${state.isNavBarOpen ? '50%' : null};
+    }
+  }
+  
+  
+  @media only screen and (min-width: 890px) {
+     display: none;
+  }
+  `;
+  
+  const MeniLow = styled.div`
+  width: 70%;
+  height: 100vh;
+  background: #312c2b;
+  position: fixed;
+  right:0;
+  z-index: 58!important;
+  
+  pointer-events: auto;
+  align-items: center;
+  
+  
+  
+  
+  @media only screen and (min-width: 500px) {
+  width: 300px;
+  }
+  @media only screen and (min-width: 890px) {
+  display: none;
+  }
+  
+  visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
+  `
+
+  const MeniQuit = styled.div`
+width: 100%;
+height: 100vh;
+position: fixed;
+right:0;
+pointer-events:auto; 
+background:transparent;
+z-index: 57!important;
+visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
+`
+
+  
+  return ( 
+  <>
+<div className={styles.Container}>
     <div className={styles.Meni}>
+      
+    <div className={styles.parentNav}>
+    <MeniQuit onClick={OpenCloseNavbar}></MeniQuit>
+<MeniLow>
+  <div className={styles.smParent}>
+  <div className={styles.smNav}>
+    <a href="/" alt="na">Почетна</a>
+  </div>
+  <div className={styles.smNav1}>
+    <a href="/menu" alt="na">Мени</a>
+  </div>
+  <div className={styles.smNav2}>
+    <a>Контакт</a>
+  </div>
+  </div>
+</MeniLow>
+<StyledHamb onClick={OpenCloseNavbar}>
+<span />
+<span />
+<span />
+<span />
+</StyledHamb>
+</div>
       <header className={styles.parent}>
         <img src={logo2} />
         <nav>
@@ -34,171 +183,51 @@ export const Menu = () => (
 
       <div className={styles.tekst10}>
           
-        <span className={styles.text2}>Мени</span>
+        <span className={styles.text4}>Мени</span>
 
       </div>
     </div>
-
+   <div className={styles.Napomena}>
+     <div className={styles.triangleleft}> <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="white" className={styles.svgcircle} viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+</svg></div>
+      
+  
+<h1>Напомена!</h1>
+     <p>Доставата до било која населба е бесплатна, меѓутоа постои одредена минимална сума. Аеродром:  200ден,  Кисела Вода:  500ден,  Центар: 600ден, Маџари:  800ден, Автокоманда:  800ден. 
+         </p>
+         <p>Доколку вашата населба не се наоѓа на листата, ве молиме контактирајте не.</p>
+   </div>
     <div className={styles.pici}>
       <span className={styles.ZostoLaTekst}>Пици</span> 
-      <div className={styles.first}>
-        <img src={pizza} />
-        <span className={styles.peperoni}>Пеперони</span>
-        <span className={styles.Span2}>Доматен сос, кашкавал, кулен</span>
-        <div className={styles.div3}>
-          <span className={styles.Span3}>
-            260 ден.
-          </span>
-          <span className={styles.Span4}>
-            380 ден.
-          </span>
-     
-        </div>
-        <div className={styles.div4}>
-          <span className={styles.Span5}>Фамилијарна 40cm</span>
-          <span className={styles.Span6}>Средна 30cm</span>
-        </div>
-      </div>  
-      <div className={styles.first}>
-        <img src={pizza2} />
-        <span className={styles.peperoni}>Туна</span>
-        <span className={styles.Span2}>Доматен сос, кашкавал, туна, маслинки, печурки, рукола, пченка</span>
-        <div className={styles.div3}>
-          <span className={styles.Span3}>
-            260 ден.
-          </span>
-          <span className={styles.Span4}>
-            450 ден.
-          </span>
-     
-        </div>
-        <div className={styles.div4}>
-          <span className={styles.Span5}>Фамилијарна 40cm</span>
-          <span className={styles.Span6}>Средна 30cm</span>
-        </div>
-      </div>  
-      <div className={styles.first}>
-        <img src={margarita} />
-        <span className={styles.peperoni}>Маргарита</span>
-        <span className={styles.Span2}>Доматен сос, кашкавал</span>
-        <div className={styles.div3}>
-          <span className={styles.Span3}>
-            210 ден.
-          </span>
-          <span className={styles.Span4}>
-            320 ден.
-          </span>
-     
-        </div>
-        <div className={styles.div4}>
-          <span className={styles.Span5}>Фамилијарна 40cm</span>
-          <span className={styles.Span6}>Средна 30cm</span>
-        </div>
-      </div>   
-      <div className={styles.first}>
-        <img src={kaprivrat} />
-        <span className={styles.peperoni}>Капри Врат</span>
-        <span className={styles.Span2}>Доматен сос, кашкавал, врат, печурки</span>
-        <div className={styles.div3}>
-          <span className={styles.Span3}>
-            260 ден.
-          </span>
-          <span className={styles.Span4}>
-            400 ден.
-          </span>
-     
-        </div>
-        <div className={styles.div4}>
-          <span className={styles.Span5}>Фамилијарна 40cm</span>
-          <span className={styles.Span6}>Средна 30cm</span>
-        </div>
-      </div>   
-      <div className={styles.first}>
-        <img src={lapizzameni} />
-        <span className={styles.peperoni}>Ла Пица</span>
-        <span className={styles.Span2}>Доматен сос, кашкавал, врат, сланина, печурки, кајмак</span>
-        <div className={styles.div3}>
-          <span className={styles.Span3}>
-            370 ден.
-          </span>
-          <span className={styles.Span4}>
-            490 ден.
-          </span>
-     
-        </div>
-        <div className={styles.div4}>
-          <span className={styles.Span5}>Фамилијарна 40cm</span>
-          <span className={styles.Span6}>Средна 30cm</span>
-        </div>
-      </div>    
-      <div className={styles.first}>
-        <img src={vege} />
-        <span className={styles.peperoni}>Вегетаријана</span>
-        <span className={styles.Span2}>Доматен сос, кашкавал, пиперка, кромид, маслинки, печурки, домат</span>
-        <div className={styles.div3}>
-          <span className={styles.Span3}>
-            250 ден.
-          </span>
-          <span className={styles.Span4}>
-            370 ден.
-          </span>
-     
-        </div>
-        <div className={styles.div4}>
-          <span className={styles.Span5}>Фамилијарна 40cm</span>
-          <span className={styles.Span6}>Средна 30cm</span>
-        </div>
-      </div>    
+      <Menuprintpizza img={pizza} names={'Пеперони'} sostav={'Доматен сос, кашкавал, кулен'} priceSmall={'260 ден.'} priceBig={'380 ден.'}></Menuprintpizza >
+      
+      <Menuprintpizza  img={pizza2} names={'Туна'} sostav={'Доматен сос, кашкавал, туна, маслинки, печурки, рукола, пченка'} priceSmall={'260 ден.'} priceBig={'450 ден.'}></Menuprintpizza >
+
+      <Menuprintpizza  img={margarita} names={'Маргарита'} sostav={'Доматен сос, кашкавал'} priceSmall={'210 ден.'} priceBig={'320 ден.'}></Menuprintpizza >
+       
+      <Menuprintpizza  img={kaprivrat} names={'Капри Врат'} sostav={'Доматен сос, кашкавал, врат, печурки'} priceSmall={'260 ден.'} priceBig={'400 ден.'}></Menuprintpizza >
+
+      <Menuprintpizza  img={lapizzameni} names={'Ла Пица'} sostav={'Доматен сос, кашкавал, врат, сланина, печурки, кајмак'} priceSmall={'370 ден.'} priceBig={'490 ден.'}></Menuprintpizza >
+
+      <Menuprintpizza  img={vege} names={'Вегетаријана'} sostav={'Доматен сос, кашкавал, пиперка, кромид, маслинки, печурки, домат'} priceSmall={'250 ден.'} priceBig={'370 ден.'}></Menuprintpizza >
+       
+       
+
+      <Menuprintpizza  img={pizza} names={'Kapri'} sostav={'Kaskaval, bla bla'} priceSmall={'240'} priceBig={'370'}></Menuprintpizza>
 
     </div>
     <div className={styles.pastr}> 
       <span className={styles.ZostoLaTekst}>Пастрмајлии</span> 
-      <div className={styles.first}>
-        <img src={kratovska} />
-        <span className={styles.peperoni}>Кратовска</span>
-        <span className={styles.Span2}>Суво домашно димено месо, зачин</span>
-        <div className={styles.divPastr3}>
-          <span className={styles.SpanPastr3}>
-            250 ден.
-          </span>
-     
-        </div>
-        <div className={styles.divPastr4}>
-          <span className={styles.SpanPastr5}>50cm</span>
-   
-        </div>
-      </div>    
-      <div className={styles.first}>
-        <img src={veleska} />
-        <span className={styles.peperoni}>Велешка</span>
-        <span className={styles.Span2}>Свинско месо, јајце, зачин</span>
-        <div className={styles.divPastr3}>
-          <span className={styles.SpanPastr3}>
-            250 ден.
-          </span>
-     
-        </div>
-        <div className={styles.divPastr4}>
-          <span className={styles.SpanPastr5}>50cm</span>
-   
-        </div>
-      </div>    
 
-      <div className={styles.first}>
-        <img src={skopska} />
-        <span className={styles.peperoni}>Велешка</span>
-        <span className={styles.Span2}>Свинско месо, јајце, кашкавал, зачин</span>
-        <div className={styles.divPastr3}>
-          <span className={styles.SpanPastr3}>
-            280 ден.
-          </span>
-     
-        </div>
-        <div className={styles.divPastr4}>
-          <span className={styles.SpanPastr5}>50cm</span>
-   
-        </div>
-      </div>    
+      <Menuprintpastr  img={kratovska} names={'Кратовска'} sostav={'Суво домашно димено месо, зачин'} price={'250 ден.'}></Menuprintpastr>
+
+      <Menuprintpastr  img={veleska} names={'Велешка'} sostav={'Свинско месо, јајце, зачин'} price={'250 ден.'}></Menuprintpastr>
+       
+      <Menuprintpastr  img={skopska} names={'Скопска'} sostav={'Свинско месо, јајце, кашкавал, зачин'} price={'280 ден.'}></Menuprintpastr>
+
+       
     </div>
     <div className={styles.Footer}>
       <div className={styles.inline}>
@@ -219,17 +248,17 @@ export const Menu = () => (
             <h2>Навигација</h2>
          
             <p><a href="/">Почетна</a></p>
-            <p><a href="/">Мени</a></p>
-            <p><a href="/">За Нас</a></p>
+                <p><a href="/">За Нас</a></p>
+                <p><a href="/menu">Мени</a></p>
        
           </div>
 
           <div className={styles.Konts}>
-            <h2>Контакт</h2>
+          <h2>Контакт</h2>
       
-            <p><cv>Адреса:</cv><br /> Бул. Јане Сандански 98</p>
-            <p><cv>Телефонски број: </cv>+389 72 57 57 56</p>
-            <p><cv>Е-маил: </cv>lapizza@hotmail.com</p>
+      <span className={styles.Adresa}><p id={styles.fill}>Адреса:</p> <p id={styles.notfill} >Бул. Јане Сандански 98</p></span>
+      <span className={styles.Adresa}><p   id={styles.fill}>Телефонски број: </p><p id={styles.notfill} > +389 72 57 57 56</p></span>
+      <span className={styles.Adresa}><p  id={styles.fill}>Е-маил: </p><p id={styles.notfill} >lapizza@hotmail.com</p></span>
             <a
               className={styles.FBSVG}
               href="https://www.facebook.com/lapizzaskopje/"
@@ -283,4 +312,6 @@ export const Menu = () => (
       
   </div>
 
-);
+  </>
+)
+};

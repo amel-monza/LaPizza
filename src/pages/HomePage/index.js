@@ -4,8 +4,9 @@ import Slider from 'infinite-react-carousel';
 import './style.css';
 import logo from '../../images/logo.jpg';
 import logo2 from '../../images/logo2.png';
-
+import styled from 'styled-components'
 import sostojki from '../../images/sostojki.png';
+import sostojki1 from '../../images/sostojki1.png';
 import dostava from '../../images/dostava.png';
 import family from '../../images/family.png';
 import zanas from '../../images/zanas.png';
@@ -22,9 +23,7 @@ import styles from './styles.module.scss';
 
 export const HomePage = () => {
   const { getUser, user, loading } = useUser();
-  const [state, setState] = useState({
-    count: 0,
-  });
+  
   const settings = {
     
     dots: false,
@@ -35,7 +34,122 @@ export const HomePage = () => {
     pauseOnHover: false,
     
   };
+  const [state,setState] = useState({
+    isNavBarOpen: false,
+  })
 
+  const OpenCloseNavbar = () => {
+    setState({isNavBarOpen: !state.isNavBarOpen})
+    
+  }
+
+  const StyledHamb = styled.div`
+  width: 30px;
+  height: 22.5px;
+  padding: 1rem;
+ 
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  pointer-events: auto;
+
+
+  
+    z-index: 59 !important;
+    position: fixed;
+     
+    
+     
+    right: 20px;
+    
+    text-align: center;
+    top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    background: transparent;
+    
+
+  & span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background:  rgb(3, 202, 202); 
+    border-radius: 5px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+
+    &:nth-child(1) {
+      top: ${state.isNavBarOpen ? '9px' : '0px'};
+      width: ${state.isNavBarOpen ? '0%' : '100%'};
+      left: ${state.isNavBarOpen ? '50%' : null};
+    }
+
+    &:nth-child(2) {
+      transform: ${state.isNavBarOpen ? 'rotate(45deg)' : null};
+    }
+
+    &:nth-child(3) {
+      transform: ${state.isNavBarOpen ? 'rotate(-45deg)' : null};
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      top: 9px;
+    }
+
+    &:nth-child(4) {
+      top: ${state.isNavBarOpen ? '9px' : '18px'};
+      width: ${state.isNavBarOpen ? '0%' : '100%'};
+      left: ${state.isNavBarOpen ? '50%' : null};
+    }
+  }
+
+
+  @media only screen and (min-width: 890px) {
+     display: none;
+  }
+`;
+
+const MeniLow = styled.div`
+width: 70%;
+height: 100vh;
+background: #312c2b;
+position: fixed;
+right:0;
+z-index: 58!important;
+ 
+pointer-events: auto;
+align-items: center;
+ 
+
+ 
+
+@media only screen and (min-width: 500px) {
+  width: 300px;
+}
+@media only screen and (min-width: 890px) {
+  display: none;
+}
+
+visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
+`
+
+const MeniQuit = styled.div`
+width: 100%;
+height: 100vh;
+position: fixed;
+right:0;
+pointer-events:auto; 
+background:transparent;
+z-index: 57!important;
+visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
+`
+  console.log(state.isNavBarOpen)
   const settingz = {
     
     dots: true,
@@ -51,8 +165,31 @@ export const HomePage = () => {
     <>
   
       <div className={styles.divKlas}>
+       
+        <div className={styles.parentNav}>
+        <MeniQuit onClick={OpenCloseNavbar}></MeniQuit>
+        <MeniLow>
+          <div className={styles.smParent}>
+          <div className={styles.smNav}>
+            <a href="/menu" alt="na">Почетна</a>
+          </div>
+          <div className={styles.smNav1}>
+            <a href="/menu" alt="na">Мени</a>
+          </div>
+          <div className={styles.smNav2}>
+            <a>Контакт</a>
+          </div>
+          </div>
+        </MeniLow>
+        <StyledHamb onClick={OpenCloseNavbar}>
+      <span />
+      <span />
+      <span />
+      <span />
+    </StyledHamb>
+        </div>
         <header className={styles.parent}>
-          <img src={logo2} />
+          <img src={logo2} onClick={OpenCloseNavbar}/>
           <nav>
             <ul className={styles.UL}>
               <li><a href="/">Почетна</a></li>
@@ -67,7 +204,7 @@ export const HomePage = () => {
           ><p>Контакт</p>
           </a>
         </header>
-        <Slider {...settings}>
+        <Slider {...settings} >
   
           <div className={styles.eachSlide}>
   
@@ -75,6 +212,7 @@ export const HomePage = () => {
    
               <span className={styles.text1}>Добредојдовте во </span>
               <span className={styles.text2}>LaPizza!</span>
+              <span className={styles.text3}>Добредојдовте во <span>LaPizza</span></span>
               <h4 className={styles.wordCarousel}>    
                 <div className={styles.wordCar}> 
  
@@ -104,6 +242,7 @@ export const HomePage = () => {
             <div className={styles.tekst10}>
               <span className={styles.text1}>Добредојдовте во </span>
               <span className={styles.text2}>LaPizza!</span>
+              <span className={styles.text3}>Добредојдовте во <span>LaPizza</span></span>
               <h4 className={styles.wordCarousel}>    
                 <div className={styles.wordCar}> 
  
@@ -134,6 +273,7 @@ export const HomePage = () => {
             <div className={styles.tekst10}>
               <span className={styles.text1}>Добредојдовте во </span>
               <span className={styles.text2}>LaPizza!</span>
+              <span className={styles.text3}>Добредојдовте во <span>LaPizza</span></span>
               <h4 className={styles.wordCarousel}>    
                 <div className={styles.wordCar}> 
  
@@ -187,6 +327,7 @@ export const HomePage = () => {
         <div className={styles.ZostoLa}>
           <div className={styles.ZsLa}>
             <img
+              className={styles.ZsLaImg}
               src={zanas}
               alt="zanas"
             />
@@ -219,36 +360,45 @@ export const HomePage = () => {
      
           <div className={styles.SostojkiDiv}>
             <img
+            className={styles.sstj}
               src={sostojki}
               alt="sostojki"
             />
+             <div className={styles.sstDef}>
             <span className={styles.SostojkiNaslov}>Квалитет</span>
             <div className={styles.SostojkiDef}>
               <span className={styles.SostojkiSpan}>LaPizza како реномиран бренд од почетокот па до сега ги користи најквалитетните состојки и оригиналните италијански рецепти за правење пици.</span>
+            </div>
             </div>
           </div>
 
           <div className={styles.DostavaDiv}>
             <img
+            className={styles.sstj}
               src={dostava}
               alt="dostava"
             />
+              <div className={styles.sstDef}>
             <span className={styles.SostojkiNaslov}>Брза достава</span>
             <div className={styles.SostojkiDef}>
      
               <span className={styles.SostojkiSpan}>Зимајќи во предвид дека пицата е најубава кога е топла, Ние како тим секокаш се стремиме кон тоа за пицата да стигне кај вас во најбрз можен рок.</span>
             </div>
+            </div>
           </div>
 
           <div className={styles.FamilyDiv}>
             <img
+            className={styles.sstj}
               src={family}
               alt="family"
             />
+             <div className={styles.sstDef}>
             <span className={styles.SostojkiNaslov}>Посветеност</span>
             <div className={styles.SostojkiDef}>
      
               <span className={styles.SostojkiSpan}>Нашиот тим од искусни пиц мајстори и доставувачи даваат се од себе за вашата нарачка да биде највкусна и доставена кај вас на време!</span>
+            </div>
             </div>
           </div>
 
@@ -351,18 +501,18 @@ export const HomePage = () => {
               <div className={styles.Navigacija}>
                 <h2>Навигација</h2>
          
-                <p>Почетна</p>
-                <p>За Нас</p>
-                <p>Мени</p>
+                <p><a href="/">Почетна</a></p>
+                <p><a href="/">За Нас</a></p>
+                <p><a href="/menu">Мени</a></p>
        
               </div>
 
               <div className={styles.Konts}>
                 <h2>Контакт</h2>
       
-                <p><cv>Адреса:</cv><br /> Бул. Јане Сандански 98</p>
-                <p><cv>Телефонски број: </cv>+389 72 57 57 56</p>
-                <p><cv>Е-маил: </cv>lapizza@hotmail.com</p>
+                <span className={styles.Adresa}><p id={styles.fill}>Адреса:</p> <p id={styles.notfill} >Бул. Јане Сандански 98</p></span>
+                <span className={styles.Adresa}><p   id={styles.fill}>Телефонски број: </p><p id={styles.notfill} > +389 72 57 57 56</p></span>
+                <span className={styles.Adresa}><p  id={styles.fill}>Е-маил: </p><p id={styles.notfill} >lapizza@hotmail.com</p></span>
                 <a
                   className={styles.FBSVG}
                   href="https://www.facebook.com/lapizzaskopje/"

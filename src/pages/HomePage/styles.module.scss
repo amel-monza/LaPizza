@@ -201,11 +201,11 @@ z-index: 9;
 
 
 .Menu {
-  height: 3rem;
+  height: 2.5rem;
   margin: 0 auto;
   text-align: center;
   justify-content: center;
-  width: 10rem;
+  width: 8rem;
   align-items: center;
   justify-content: center;
   
@@ -252,9 +252,9 @@ margin-bottom: 100px;
 
    p {
      
-     font-size: 23px;
+     font-size: 19px;
      position: relative;
-     top: 10px;
+     top: 8px;
    }
    }
   }
@@ -343,9 +343,9 @@ margin-bottom: 100px;
           position: absolute;
           top: 0;
           left: 0;
-          background-position: 50% 50%;
+          background-position: 50% 60%;
           transform: translateZ(0) scale(1.0, 1.0);
-          background-image:url("../../images/LaPizza.png");
+          background-image:url("../../images/lapizzaorg.png");
           background-size: cover;
           
           animation: zoom 12s linear 10ms 6;
@@ -479,10 +479,12 @@ margin-bottom: 100px;
 
 
 .parent {
+
   pointer-events: auto;
           z-index: 55!important;
           position: absolute;
-          width: 1000px;
+          width: 80%;
+          max-width: 1000px;
           top: 120px;
           left: 50%;
           transform: translate(-50%);
@@ -733,8 +735,7 @@ margin-bottom: 100px;
   width: 100%;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  height: 1900px;
+  margin: 0 auto; 
   margin-top: 100px;
   text-align: center; 
    
@@ -1111,7 +1112,7 @@ font-size: 22px;
 
 
  .GoogleMap{
-   width: 50%;
+   width: 40%;
    display: inline-block;
    
    height: 450px;
@@ -1119,7 +1120,7 @@ font-size: 22px;
  }
 
  .Kontakt {
-   width: 50%;
+   width: 60%;
   position: relative;
    vertical-align: middle;
    display: inline-block;
@@ -1129,14 +1130,19 @@ font-size: 22px;
    .Navigacija{
     width: 50%;
     display: inline-block;
-    padding: 0 0 0 80px;
+    padding: 0 0 0 60px;
     left: 0;
     top: 0;
     position: absolute;
     p {
-     color: rgb(3, 202, 202);
+     
      padding: 30px 0 0 0;
-     font-size: 18px;
+     font-size: 16px;
+
+     a{
+      color: rgb(3, 202, 202);
+      text-decoration: none;
+     }
     }
     h2{
       font-size: 28px;
@@ -1151,7 +1157,7 @@ font-size: 22px;
      width: 50%;
      display: inline-block;
      right: 0;
-     padding: 0 0 0 60px;
+     padding: 0 0 0 40px;
      top: 0;
      position: absolute;
 
@@ -1178,13 +1184,11 @@ font-size: 22px;
      }
 
      p {
-      color: white;
-      padding: 30px 0 0 0;
-      font-size: 18px;
+      
+      
+      font-size: 16px;
 
-      cv{
-        color: rgb(3, 202, 202);
-      }
+      
   
       
      }
@@ -1192,10 +1196,27 @@ font-size: 22px;
  }
 
 
+ .Adresa {
+
+  #fill {
+    font-size: 16px;
+    color: rgb(3, 202, 202);
+    padding: 30px 0 0 0;
+  }
+   
+  #notfill{
+    color: white;
+  }
+ 
+ 
+   
+ }
+
  .inline {
    position: relative;
   margin: 0 auto;
-  width: 990px;
+  width: 100%;
+  max-width: 990px;
  }
 
  
@@ -1209,3 +1230,471 @@ font-size: 22px;
    font-size: 15px;
     
  }
+
+ .smNav {
+   width: 100%;
+   height: 50px;
+   cursor: pointer;
+   text-align: center;
+   background: rgb(3, 202, 202);
+   a{
+    color: white;
+    opacity: 1;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    text-decoration: none;
+    display: block;
+    position: relative;
+   }
+   
+ }
+
+ .smNav1 {
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+  text-align: center;
+  a{
+    color: white;
+    opacity: 0.7;
+    font-size: 20px;
+    height: 50px;
+    text-decoration: none;
+    line-height: 50px;
+     
+    display: block;
+    position: relative;
+  }
+  
+}
+
+.smNav2 {
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+  text-align: center;
+  a{
+    color: white;
+    opacity: 0.7;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    text-decoration: none;
+    display: block;
+    position: relative;
+  }
+  
+}
+
+.smNav1:hover {
+  background: rgb(3, 202, 202);
+    
+    a{
+      opacity: 1;
+    }
+}
+
+.smNav2:hover {
+  background: rgb(3, 202, 202);
+    
+    a{
+      opacity: 1;
+     
+    }
+}
+ 
+.smParent {
+  position: absolute;
+  top: 35%;
+  width: 100%;
+}
+
+ 
+
+@media only screen and (max-width: 1000px) {
+  .ZsLaImg {
+    display: none;
+  }
+  
+  .Sostojki {
+    display: inherit;
+    
+  }
+  .sstj {
+    width: 50%;
+    display: inline-block;
+    float: left;
+  }
+  .SostojkiDef {
+    
+    text-align: center;
+    padding: 0 10px 0 10px;
+  }
+  .sstDef {
+    display: inline-block;
+    width: 50%;
+     
+  }
+  .SostojkiDiv {
+    width: 100%;
+    display: flex;
+    margin-bottom: 30px; 
+    
+    img {
+      width: 50%;
+    }
+  }
+
+  .DostavaDiv {
+    width: 100%;
+    display: flex;
+    margin-bottom: 30px;
+
+    img {
+      width: 50%;
+    }
+  }
+
+  .FamilyDiv {
+    width: 100%;
+    display: flex;
+    margin-bottom: 30px;
+
+    img {
+      width: 50%;
+    }
+
+  }
+
+  .lettuce {
+    margin-top: 360px;
+  }
+
+  .garlic {
+    margin-top: 320px;
+  }
+
+  
+}
+ @media only screen and (max-width: 890px) {
+  .parent{
+    display: none;
+  }
+
+
+ 
+ 
+    .eachSlide:before{
+      animation: none;
+    }
+    
+    .eachSlide1 {
+      animation: none;
+      left: 0;
+      width: 100%;
+    }
+
+    .eachSlide2 {
+      animation: none;
+      width: 200%;
+    }
+
+    .wordCarousel {
+      
+       span{
+       
+        animation: none; 
+        animation: none;
+         
+      }
+      div {
+     
+          li {
+            animation: none;
+            
+          }
+     }
+    }
+    .flip3{
+      animation: none;
+    }
+
+    .text1 {
+     display: none;
+    }
+
+    .text2 {
+     display: none;
+    }
+
+    
+    .wordCarousel{
+      display: none;
+    }
+
+    .tekst10{
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .text3{
+      animation: none;
+      font-size: 55px;
+      margin-right: 0px;
+      margin-bottom: 0px;
+      opacity: 1;
+      text-align: left;
+      width: 100%;
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+       
+       span {
+         color: rgb(3, 202, 202);
+         text-align: center;
+       }
+    }
+
+    
+}
+
+@media only screen and (min-width: 890px) {
+  .text3{
+    display: none;
+  }
+  }
+
+  @media only screen and (max-width: 800px) {
+   
+    .Vpecatoci {
+      font-size: 45px;
+    }
+
+    .Opis {
+      font-size: 19px;
+    }
+
+
+   }
+
+   @media only screen and (max-width: 780px) {
+   
+    .LaPizzaFb {
+      top: 25%;
+    }
+
+    .GoogleMap {
+      width: 90%;
+
+    }
+
+    .Kontakt {
+      width: 90%;
+      margin-top: 20px;
+      height: 350px;
+    }
+    
+    .Kontakt {
+      .Navigacija {
+        padding: 0 0 0 20px;
+      }
+
+      .Konts {
+        padding: 0 0 0 20px;
+      }
+    }
+
+    .Footer {
+      height: auto;
+    }
+
+   }
+
+    
+
+@media only screen and (max-width: 560px) {
+
+  .Back {
+    margin-top: 80px;
+  }
+
+  .text3{
+    font-size: 35px;
+  }
+  
+  .ZostoContainer {
+    height: auto;
+  }
+  .mushroom, .tomato, .garlic, .lettuce {
+    display: none;
+  }
+
+  .ZostoLaTekst{
+    font-size: 35px;
+  }
+
+  .SostojkiSpan {
+    font-size: 14px;
+  }
+
+  .ZsLaImg {
+    display: none;
+  }
+  
+  .Sostojki {
+    display: inherit;
+    
+  }
+  .sstj {
+    width: 50%;
+    display: inline-block;
+    float: left;
+  }
+  .SostojkiDef {
+    
+    text-align: center;
+    padding: 0 10px 0 10px;
+  }
+  .sstDef {
+    display: inline-block;
+    width: 100%;
+     
+  }
+  .SostojkiDiv {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 30px; 
+    
+    img {
+      width: 100%;
+    }
+  }
+
+  .DostavaDiv {
+    width: 100%;
+  display: inline-block;
+  margin-bottom: 30px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .FamilyDiv {
+    width: 100%;
+  display: inline-block;
+  margin-bottom: 30px;
+
+    img {
+      width: 100%;
+    }
+
+  }
+  }
+
+  @media only screen and (max-width: 500px) { 
+
+   .Kontakt {
+     height: 530px;
+
+     .Navigacija {
+       width: 100%;
+       position: relative;
+     }
+
+     .Konts {
+      width: 100%;
+      position: relative;
+      margin-top: 30px;
+     }
+   }
+  }
+  @media only screen and (max-width: 450px) {
+    .Vpecatoci{
+      font-size: 35px;
+    }
+
+    .Opis {
+      font-size: 16px;
+      width: 80%;
+    }
+
+    .LaPizzaFb {
+
+      height: 40px;
+      width: 40px;
+      img {
+        width: 40px;
+        height: 40px;
+      }
+
+      a{
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    .Nickname {
+      font-size: 19px;
+    }
+
+    .Stars {
+      width: 130px;
+      height: 20px;
+    }
+    }
+
+    @media only screen and (max-width: 430px) {
+
+      .LaPizzaFb {
+        top: 23%;
+      }
+     
+      .Rights {
+        font-size: 12px;
+      }
+    }
+
+    @media only screen and (max-width: 335px) {
+
+
+      .Opis {
+        width: 70%;
+      }
+      .Vpecatoci {
+        font-size: 25px;
+      }
+
+      .Nickname {
+        top: 90%;
+      }
+
+      .Stars {
+        top: 82%;
+      }
+
+      .LaPizzaFb {
+        top: 19%;
+        height: 30px;
+        width: 30px;
+        img {
+          width: 30px;
+          height: 30px;
+        }
+  
+        a{
+          width: 30px;
+          height: 30px;
+        }
+      }
+     
+    }
+ 
+  @media only screen and (max-width: 350px) {
+    .text3{
+      font-size: 28px;
+    }
+    }
+
+   
+ 
