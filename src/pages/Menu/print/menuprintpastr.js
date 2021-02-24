@@ -1,27 +1,22 @@
 import React, { useState } from 'react';
-import styles from './styles.module.scss'
+import styles from './styles.module.scss';
 
-const Menuprintpastr = ({ img, names, sostav, price }) => {
-
-
-    
-    return (
-        <div className={styles.first}>
-        <img src={img} />
-        <span className={styles.peperoni}>{names}</span>
-        <span className={styles.Span2}>{sostav}</span>
-        <div className={styles.divPastr3}>
-          <span className={styles.SpanPastr3}>
-            {price}
-          </span>
+const Menuprintpastr = ({ img, names, sostav, price }) => (
+  <div className={styles.first}>
+    <img src={img} />
+    <span className={styles.peperoni}>{names}</span>
+    <span className={styles.Span2}>{sostav}</span>
+    <div className={styles.divPastr3}>
+      <span className={styles.SpanPastr3}>
+        {price}
+      </span>
      
-        </div>
-        <div className={styles.divPastr4}>
-          <span className={styles.SpanPastr5}>50cm</span>
+    </div>
+    <div className={styles.divPastr4}>
+      <span className={styles.SpanPastr5}>50cm</span>
    
-        </div>
-      </div>    
-    )
-};
+    </div>
+  </div>    
+);
 
 export default Menuprintpastr;

@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useUser } from 'services/users/user/hook';
 import Slider from 'infinite-react-carousel';
 import './style.css';
+import styled from 'styled-components';
 import logo from '../../images/logo.jpg';
 import logo2 from '../../images/logo2.png';
-import styled from 'styled-components'
 import sostojki from '../../images/sostojki.png';
 import sostojki1 from '../../images/sostojki1.png';
 import dostava from '../../images/dostava.png';
@@ -34,14 +34,14 @@ export const HomePage = () => {
     pauseOnHover: false,
     
   };
-  const [state,setState] = useState({
+  const [state, setState] = useState({
     isNavBarOpen: false,
-  })
+  });
 
   const OpenCloseNavbar = () => {
-    setState({isNavBarOpen: !state.isNavBarOpen})
+    setState({ isNavBarOpen: !state.isNavBarOpen });
     
-  }
+  };
 
   const StyledHamb = styled.div`
   width: 30px;
@@ -115,7 +115,7 @@ export const HomePage = () => {
   }
 `;
 
-const MeniLow = styled.div`
+  const MeniLow = styled.div`
 width: 70%;
 height: 100vh;
 background: #312c2b;
@@ -137,9 +137,9 @@ align-items: center;
 }
 
 visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
-`
+`;
 
-const MeniQuit = styled.div`
+  const MeniQuit = styled.div`
 width: 100%;
 height: 100vh;
 position: fixed;
@@ -148,8 +148,8 @@ pointer-events:auto;
 background:transparent;
 z-index: 57!important;
 visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
-`
-  console.log(state.isNavBarOpen)
+`;
+  console.log(state.isNavBarOpen);
   const settingz = {
     
     dots: true,
@@ -167,29 +167,40 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
       <div className={styles.divKlas}>
        
         <div className={styles.parentNav}>
-        <MeniQuit onClick={OpenCloseNavbar}></MeniQuit>
-        <MeniLow>
-          <div className={styles.smParent}>
-          <div className={styles.smNav}>
-            <a href="/menu" alt="na">Почетна</a>
-          </div>
-          <div className={styles.smNav1}>
-            <a href="/menu" alt="na">Мени</a>
-          </div>
-          <div className={styles.smNav2}>
-            <a>Контакт</a>
-          </div>
-          </div>
-        </MeniLow>
-        <StyledHamb onClick={OpenCloseNavbar}>
-      <span />
-      <span />
-      <span />
-      <span />
-    </StyledHamb>
+          <MeniQuit onClick={OpenCloseNavbar} />
+          <MeniLow>
+            <div className={styles.smParent}>
+              <div className={styles.smNav}>
+                <a
+                  href="/menu"
+                  alt="na"
+                >Почетна
+                </a>
+              </div>
+              <div className={styles.smNav1}>
+                <a
+                  href="/menu"
+                  alt="na"
+                >Мени
+                </a>
+              </div>
+              <div className={styles.smNav2}>
+                <a>Контакт</a>
+              </div>
+            </div>
+          </MeniLow>
+          <StyledHamb onClick={OpenCloseNavbar}>
+            <span />
+            <span />
+            <span />
+            <span />
+          </StyledHamb>
         </div>
         <header className={styles.parent}>
-          <img src={logo2} onClick={OpenCloseNavbar}/>
+          <img
+            src={logo2}
+            onClick={OpenCloseNavbar}
+          />
           <nav>
             <ul className={styles.UL}>
               <li><a href="/">Почетна</a></li>
@@ -204,7 +215,7 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
           ><p>Контакт</p>
           </a>
         </header>
-        <Slider {...settings} >
+        <Slider {...settings}>
   
           <div className={styles.eachSlide}>
   
@@ -360,45 +371,45 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
      
           <div className={styles.SostojkiDiv}>
             <img
-            className={styles.sstj}
+              className={styles.sstj}
               src={sostojki}
               alt="sostojki"
             />
-             <div className={styles.sstDef}>
-            <span className={styles.SostojkiNaslov}>Квалитет</span>
-            <div className={styles.SostojkiDef}>
-              <span className={styles.SostojkiSpan}>LaPizza како реномиран бренд од почетокот па до сега ги користи најквалитетните состојки и оригиналните италијански рецепти за правење пици.</span>
-            </div>
+            <div className={styles.sstDef}>
+              <span className={styles.SostojkiNaslov}>Квалитет</span>
+              <div className={styles.SostojkiDef}>
+                <span className={styles.SostojkiSpan}>LaPizza како реномиран бренд од почетокот па до сега ги користи најквалитетните состојки и оригиналните италијански рецепти за правење пици.</span>
+              </div>
             </div>
           </div>
 
           <div className={styles.DostavaDiv}>
             <img
-            className={styles.sstj}
+              className={styles.sstj}
               src={dostava}
               alt="dostava"
             />
-              <div className={styles.sstDef}>
-            <span className={styles.SostojkiNaslov}>Брза достава</span>
-            <div className={styles.SostojkiDef}>
+            <div className={styles.sstDef}>
+              <span className={styles.SostojkiNaslov}>Брза достава</span>
+              <div className={styles.SostojkiDef}>
      
-              <span className={styles.SostojkiSpan}>Зимајќи во предвид дека пицата е најубава кога е топла, Ние како тим секокаш се стремиме кон тоа за пицата да стигне кај вас во најбрз можен рок.</span>
-            </div>
+                <span className={styles.SostojkiSpan}>Зимајќи во предвид дека пицата е најубава кога е топла, Ние како тим секокаш се стремиме кон тоа за пицата да стигне кај вас во најбрз можен рок.</span>
+              </div>
             </div>
           </div>
 
           <div className={styles.FamilyDiv}>
             <img
-            className={styles.sstj}
+              className={styles.sstj}
               src={family}
               alt="family"
             />
-             <div className={styles.sstDef}>
-            <span className={styles.SostojkiNaslov}>Посветеност</span>
-            <div className={styles.SostojkiDef}>
+            <div className={styles.sstDef}>
+              <span className={styles.SostojkiNaslov}>Посветеност</span>
+              <div className={styles.SostojkiDef}>
      
-              <span className={styles.SostojkiSpan}>Нашиот тим од искусни пиц мајстори и доставувачи даваат се од себе за вашата нарачка да биде највкусна и доставена кај вас на време!</span>
-            </div>
+                <span className={styles.SostojkiSpan}>Нашиот тим од искусни пиц мајстори и доставувачи даваат се од себе за вашата нарачка да биде највкусна и доставена кај вас на време!</span>
+              </div>
             </div>
           </div>
 
@@ -510,9 +521,9 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
               <div className={styles.Konts}>
                 <h2>Контакт</h2>
       
-                <span className={styles.Adresa}><p id={styles.fill}>Адреса:</p> <p id={styles.notfill} >Бул. Јане Сандански 98</p></span>
-                <span className={styles.Adresa}><p   id={styles.fill}>Телефонски број: </p><p id={styles.notfill} > +389 72 57 57 56</p></span>
-                <span className={styles.Adresa}><p  id={styles.fill}>Е-маил: </p><p id={styles.notfill} >lapizza@hotmail.com</p></span>
+                <span className={styles.Adresa}><p id={styles.fill}>Адреса:</p> <p id={styles.notfill}>Бул. Јане Сандански 98</p></span>
+                <span className={styles.Adresa}><p id={styles.fill}>Телефонски број: </p><p id={styles.notfill}> +389 72 57 57 56</p></span>
+                <span className={styles.Adresa}><p id={styles.fill}>Е-маил: </p><p id={styles.notfill}>lapizza@hotmail.com</p></span>
                 <a
                   className={styles.FBSVG}
                   href="https://www.facebook.com/lapizzaskopje/"

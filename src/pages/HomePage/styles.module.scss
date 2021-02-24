@@ -954,7 +954,7 @@ color: rgb(3, 202, 202);
   justify-content: center;
   height: 450px;
   margin-left: 30px;
-  text-align: left;
+  text-align: center;
    
 }
 
@@ -1316,6 +1316,10 @@ font-size: 22px;
   .ZsLaImg {
     display: none;
   }
+
+  .ZostoContainer {
+    margin-left: 0;
+  }
   
   .Sostojki {
     display: inherit;
@@ -1436,6 +1440,8 @@ font-size: 22px;
     .tekst10{
       width: 80%;
       margin: 0 auto;
+      top: 33%;
+       
     }
 
     .text3{
@@ -1514,6 +1520,7 @@ font-size: 22px;
 
 @media only screen and (max-width: 560px) {
 
+
   .Back {
     margin-top: 80px;
   }
@@ -1530,7 +1537,7 @@ font-size: 22px;
   }
 
   .ZostoLaTekst{
-    font-size: 35px;
+    font-size: 30px;
   }
 
   .SostojkiSpan {

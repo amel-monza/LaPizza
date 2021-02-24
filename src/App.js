@@ -21,7 +21,7 @@ const App = () => (
           path="/menu"
           component={Menu}
         />
-         <Redirect to="/"/>
+        <Redirect to="/" />
       </Switch>
     </Provider>
   </Router>
