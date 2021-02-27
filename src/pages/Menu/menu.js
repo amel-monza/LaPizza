@@ -6,16 +6,31 @@ import pizza2 from '../../images/pizza2.png';
 import margarita from '../../images/margarita.png';
 import prshuto from '../../images/prshuto1.png';
 import kapri from '../../images/kapri.png';
+import kalcone from '../../images/kalcone.png';
 import napolitana from '../../images/napolitana.png';
 import kaprivrat from '../../images/kaprivrat.png';
+import kulen from '../../images/kulen.png';
+import vafli from '../../images/vafli.png';
+import palacinki from '../../images/palacinki.png';
+import oliva from '../../images/oliva.png';
+import psendvic from '../../images/psendvic.png';
+import kvatroS from '../../images/kvatro-s.png';
+import skopje from '../../images/skopje.png';
+import peperoni from '../../images/peperoni.png';
 import lapizzameni from '../../images/lapizzameni.png';
 import vege from '../../images/vege.png';
+import vezuvio from '../../images/vezuvio.png';
 import kratovska from '../../images/kratovska.png';
 import veleska from '../../images/veleska.png';
 import skopska from '../../images/skopska.png';
+import stipska from '../../images/stipska.png';
+import pileska from '../../images/pileska.png';
 import styles from './styles.module.scss';
 import Menuprintpizza from './print/menuprintpizza';
 import Menuprintpastr from './print/menuprintpastr';
+import Menups from './print/menups';
+
+
 
 export const Menu = () => { 
 
@@ -215,11 +230,19 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
         <div className={styles.pici}>
           <span className={styles.ZostoLaTekst}>Пици</span> 
           <Menuprintpizza
-            img={pizza}
-            names="Пеперони"
-            sostav="Доматен сос, кашкавал, кулен"
-            priceSmall="260 ден."
-            priceBig="380 ден."
+            img={peperoni}
+            names="Ла Хот Пица"
+            sostav="Доматен сос (чили), кашкавал, кулен, феферони, лук"
+            priceSmall="280 ден."
+            priceBig="420 ден."
+          />
+
+          <Menuprintpizza
+            img={vezuvio}
+            names="Везувио"
+            sostav="Доматен сос, кашкавал, шунка"
+            priceSmall="230 ден."
+            priceBig="340 ден."
           />
 
 
@@ -233,11 +256,35 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
           />
 
           <Menuprintpizza
+            img={skopje}
+            names="Скопје"
+            sostav="Доматен сос, кашкавал, сланина, јајце, кромид"
+            priceSmall="270 ден."
+            priceBig="400 ден."
+          />
+
+          <Menuprintpizza
+            img={kvatroS}
+            names="Кватро-Стаџоне"
+            sostav="Доматен сос, кашкавал, сланина, кулен, пршут, суво домашно димено месо"
+            priceSmall="270 ден."
+            priceBig="400 ден."
+          />
+
+          <Menuprintpizza
             img={margarita}
             names="Маргарита"
             sostav="Доматен сос, кашкавал"
             priceSmall="210 ден."
             priceBig="320 ден."
+          />
+
+          <Menuprintpizza
+            img={oliva}
+            names="Олива"
+            sostav="Доматен сос, кашкавал, моцарела, маслинки"
+            priceSmall="250 ден."
+            priceBig="440 ден."
           />
 
         <Menuprintpizza
@@ -254,6 +301,14 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
             sostav="Доматен сос, кашкавал, врат, печурки"
             priceSmall="260 ден."
             priceBig="400 ден."
+          />
+
+          <Menuprintpizza
+            img={kulen}
+            names="Пеперони"
+            sostav="Доматен сос, кашкавал, кулен"
+            priceSmall="260 ден."
+            priceBig="380 ден."
           />
 
           <Menuprintpizza
@@ -288,6 +343,9 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
             priceBig="340 ден."
           />
 
+           
+
+
           
 
         </div>
@@ -314,7 +372,72 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
             sostav="Свинско месо, јајце, кашкавал, зачин"
             price="280 ден."
           />
+
+           <Menuprintpastr
+            img={stipska}
+            names="Штипска"
+            sostav="Свинско месо, зачин"
+            price="230 ден."
+          />
+
+          <Menuprintpastr
+            img={pileska}
+            names="Пилешка"
+            sostav="Пилешко месо, зачин"
+            price="200 ден."
+          />
        
+      
+
+        </div>
+        <div className={styles.pastr}> 
+          <span className={styles.ZostoLaTekst}>Калцоне</span> 
+
+        
+          <Menups
+            img={kalcone}
+            names="Калцоне"
+            sostav="Шунка, кашкавал, печурки, доматен сос"
+            price="130 ден."
+          />
+  
+
+        </div>
+
+        <div className={styles.pastr}> 
+          <span className={styles.ZostoLaTekst}>Пица Сендвич</span> 
+
+        
+          <Menups
+            img={psendvic}
+            names="Пица Сендвич"
+            sostav="Шунка, кашкавал, марула, домат, павлака, мајонез"
+            price="130 ден."
+          />
+  
+
+        </div>
+
+
+        <div className={styles.pastr}> 
+          <span className={styles.ZostoLaTekst}>Десерти</span> 
+
+        
+          <Menups
+            img={vafli}
+            names="Вафли"
+            sostav="Нутела, чоколаден прелив"
+            price="120 ден."
+          />
+
+          <Menups
+            img={palacinki}
+            names="Палачинки"
+            sostav="Нутела, чоколаден прелив"
+            price="120 ден."
+          />
+  
+
         </div>
         <div className={styles.Footer}>
           <div className={styles.inline}>
