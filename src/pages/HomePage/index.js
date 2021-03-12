@@ -184,7 +184,7 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
                 >Мени
                 </a>
               </div>
-              <div className={styles.smNav2}>
+              <div className={styles.smNav2} onClick={OpenCloseNavbar}>
                 <a href="#kontakt">Контакт</a>
               </div>
             </div>
@@ -197,10 +197,9 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
           </StyledHamb>
         </div>
         <header className={styles.parent}>
-          <img
-            src={logo2}
-            onClick={OpenCloseNavbar}
-          />
+        <a href="/">
+            <img src={logo2} />
+            </a>
           <nav>
             <ul className={styles.UL}>
               <li><a href="/">Почетна</a></li>
@@ -336,7 +335,10 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
           alt="lettuce"
         />
         <div className={styles.ZostoLa}>
-          <div className={styles.ZsLa} id="zanas">
+          <div
+            className={styles.ZsLa}
+            id="zanas"
+          >
             <img
               className={styles.ZsLaImg}
               src={zanas}
@@ -350,7 +352,10 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
               />
               </div>
   
-              <span className={styles.SostojkiSpan}>Нашата приказна почнува во Октомври, далечната 2005. После долги години како почитувани пиц мајстори во Италија, одлучивме да се вратиме во Македонија и да ги пренесеме вкусовите и искуствата од стекнатото знаење во Италија. Решивме да отвориме наша пицерија. Се од тогаш па до сега ги задоволуваме сите потреби на нашите купувачи со вкусни пици и брза достава.
+              <span className={styles.SostojkiSpan}>Ла Пица постои од 2018 година и работи исклучиво со достава на храна. Нудиме брза и квалитетна услуга со љубезен персонал.
+                <br />
+                <br />
+                Репроматеријалите со кои работиме се со декларација од прва класа, што значи дека квалитетот на производите е на највисоко ниво.
                 <br />
                 <br />
                 Нашата цел е да се прошириме на цела територија на град Скопје и секој граѓанин да го дели еден повик од највкусната пица во градот, а притоа да го задржиме квалитетот!
@@ -494,7 +499,10 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
 
           </Slider>
         </div>
-        <div className={styles.Footer} id="kontakt">
+        <div
+          className={styles.Footer}
+          id="kontakt"
+        >
           <div className={styles.inline}>
             <div className={styles.GoogleMap}>
               <iframe

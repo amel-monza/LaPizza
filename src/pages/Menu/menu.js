@@ -25,12 +25,11 @@ import veleska from '../../images/veleska.png';
 import skopska from '../../images/skopska.png';
 import stipska from '../../images/stipska.png';
 import pileska from '../../images/pileska.png';
+import menipdf from '../../images/menipdf.pdf';
 import styles from './styles.module.scss';
 import Menuprintpizza from './print/menuprintpizza';
 import Menuprintpastr from './print/menuprintpastr';
 import Menups from './print/menups';
-import menipdf from '../../images/menipdf.pdf';
-
 
 export const Menu = () => { 
 
@@ -173,8 +172,8 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
                   >Мени
                   </a>
                 </div>
-                <div className={styles.smNav2}>
-                  <a>Контакт</a>
+                <div className={styles.smNav2} onClick={OpenCloseNavbar}>
+                  <a href="#kontakt">Контакт</a>
                 </div>
               </div>
             </MeniLow>
@@ -186,7 +185,9 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
             </StyledHamb>
           </div>
           <header className={styles.parent}>
+            <a href="/">
             <img src={logo2} />
+            </a>
             <nav>
               <ul className={styles.UL}>
                 <li><a href="/">Почетна</a></li>
@@ -222,13 +223,19 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
           </svg>
           </div>
   
-          <h1>Напомена!</h1><br/>
+          <h1>Напомена!</h1><br />
           <h4>Доставата до било која населба е бесплатна, меѓутоа постои одредена минимална сума. 
-          </h4><br/>
+          </h4><br />
           <h4>За повеќе информации ве молиме исконтактирајте не.</h4>
         </div>
         <div className={styles.Cmenipdf}>
-        <a className={styles.menipdf} href={menipdf} download="Menu" target="_blank">Превземи мени во PDF формат.</a>
+          <a
+            className={styles.menipdf}
+            href={menipdf}
+            download="Menu"
+            target="_blank"
+          >Превземи мени во PDF формат.
+          </a>
         </div>
         <div className={styles.pici}>
           <span className={styles.ZostoLaTekst}>Пици</span> 
@@ -247,8 +254,6 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
             priceSmall="230 ден."
             priceBig="340 ден."
           />
-
-
       
           <Menuprintpizza
             img={pizza2}
@@ -290,7 +295,7 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
             priceBig="440 ден."
           />
 
-        <Menuprintpizza
+          <Menuprintpizza
             img={prshuto}
             names="Пршуто"
             sostav="Доматен сос, кашкавал, пршута, рукола, пармезан"
@@ -346,11 +351,6 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
             priceBig="340 ден."
           />
 
-           
-
-
-          
-
         </div>
         <div className={styles.pastr}> 
           <span className={styles.ZostoLaTekst}>Пастрмајлии</span> 
@@ -376,7 +376,7 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
             price="280 ден."
           />
 
-           <Menuprintpastr
+          <Menuprintpastr
             img={stipska}
             names="Штипска"
             sostav="Свинско месо, зачин"
@@ -389,13 +389,10 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
             sostav="Пилешко месо, зачин"
             price="200 ден."
           />
-       
-      
 
         </div>
         <div className={styles.pastr}> 
           <span className={styles.ZostoLaTekst}>Калцоне</span> 
-
         
           <Menups
             img={kalcone}
@@ -403,13 +400,11 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
             sostav="Шунка, кашкавал, печурки, доматен сос"
             price="130 ден."
           />
-  
 
         </div>
 
         <div className={styles.pastr}> 
           <span className={styles.ZostoLaTekst}>Пица Сендвич</span> 
-
         
           <Menups
             img={psendvic}
@@ -417,14 +412,11 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
             sostav="Шунка, кашкавал, марула, домат, павлака, мајонез"
             price="130 ден."
           />
-  
 
         </div>
 
-
         <div className={styles.pastr}> 
           <span className={styles.ZostoLaTekst}>Десерти</span> 
-
         
           <Menups
             img={vafli}
@@ -440,9 +432,11 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
             price="120 ден."
           />
   
-  
         </div>
-        <div className={styles.Footer} id="kontakt">
+        <div
+          className={styles.Footer}
+          id="kontakt"
+        >
           <div className={styles.inline}>
             <div className={styles.GoogleMap}>
               <iframe
