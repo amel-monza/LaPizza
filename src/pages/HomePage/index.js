@@ -185,7 +185,7 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
                 </a>
               </div>
               <div className={styles.smNav2}>
-                <a>Контакт</a>
+                <a href="#kontakt">Контакт</a>
               </div>
             </div>
           </MeniLow>
@@ -205,13 +205,13 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
             <ul className={styles.UL}>
               <li><a href="/">Почетна</a></li>
               <li><a href="/menu">Мени</a></li>
-              <li><a href="g">За Нас</a></li>
+              <li><a href="#zanas">За Нас</a></li>
                
             </ul>
           </nav>
           <a
             className={styles.cta}
-            href="a"
+            href="#kontakt"
           ><p>Контакт</p>
           </a>
         </header>
@@ -336,7 +336,7 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
           alt="lettuce"
         />
         <div className={styles.ZostoLa}>
-          <div className={styles.ZsLa}>
+          <div className={styles.ZsLa} id="zanas">
             <img
               className={styles.ZsLaImg}
               src={zanas}
@@ -408,7 +408,7 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
               <span className={styles.SostojkiNaslov}>Посветеност</span>
               <div className={styles.SostojkiDef}>
      
-                <span className={styles.SostojkiSpan}>Нашиот тим од искусни пиц мајстори и доставувачи даваат се од себе за вашата нарачка да биде највкусна и доставена кај вас на време!</span>
+                <span className={styles.SostojkiSpan}>Нашиот тим од искусни пица мајстори и доставувачи даваат се од себе за вашата нарачка да биде највкусна и доставена кај вас на време!</span>
               </div>
             </div>
           </div>
@@ -494,7 +494,7 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
 
           </Slider>
         </div>
-        <div className={styles.Footer}>
+        <div className={styles.Footer} id="kontakt">
           <div className={styles.inline}>
             <div className={styles.GoogleMap}>
               <iframe
@@ -513,7 +513,7 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
                 <h2>Навигација</h2>
          
                 <p><a href="/">Почетна</a></p>
-                <p><a href="/">За Нас</a></p>
+                <p><a href="#zanas">За Нас</a></p>
                 <p><a href="/menu">Мени</a></p>
        
               </div>
@@ -546,7 +546,7 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
 
                 <a
                   className={styles.FBSVG}
-                  href="https://www.instagram.com/lapizza_delivery_/"
+                  href="https://www.instagram.com/lapizzamk/?hl=en"
                   target="_blank"
                 >
                   <svg

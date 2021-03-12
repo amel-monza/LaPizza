@@ -29,7 +29,7 @@ import styles from './styles.module.scss';
 import Menuprintpizza from './print/menuprintpizza';
 import Menuprintpastr from './print/menuprintpastr';
 import Menups from './print/menups';
-
+import menipdf from '../../images/menipdf.pdf';
 
 
 export const Menu = () => { 
@@ -191,13 +191,13 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
               <ul className={styles.UL}>
                 <li><a href="/">Почетна</a></li>
                 <li><a href="/menu">Мени</a></li>
-                <li><a href="g">За Нас</a></li>
+                <li><a href="/#zanas">За Нас</a></li>
               
               </ul>
             </nav>
             <a
               className={styles.cta}
-              href="a"
+              href="#kontakt"
             ><p>Контакт</p>
             </a>
           </header>
@@ -223,9 +223,12 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
           </div>
   
           <h1>Напомена!</h1><br/>
-          <h4>Доставата до било која населба е бесплатна, меѓутоа постои одредена минимална сума.<br/><br/> <p>Аеродром:</p>  200ден,  <p>Кисела Вода:</p>  500ден,  <p>Центар:</p> 600ден, <p>Маџари:</p>  800ден, <p>Автокоманда:</p>  800ден. 
+          <h4>Доставата до било која населба е бесплатна, меѓутоа постои одредена минимална сума. 
           </h4><br/>
-          <h4>Доколку вашата населба не се наоѓа на листата, ве молиме контактирајте не.</h4>
+          <h4>За повеќе информации ве молиме исконтактирајте не.</h4>
+        </div>
+        <div className={styles.Cmenipdf}>
+        <a className={styles.menipdf} href={menipdf} download="Menu" target="_blank">Превземи мени во PDF формат.</a>
         </div>
         <div className={styles.pici}>
           <span className={styles.ZostoLaTekst}>Пици</span> 
@@ -437,9 +440,9 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
             price="120 ден."
           />
   
-
+  
         </div>
-        <div className={styles.Footer}>
+        <div className={styles.Footer} id="kontakt">
           <div className={styles.inline}>
             <div className={styles.GoogleMap}>
               <iframe
@@ -458,7 +461,7 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
                 <h2>Навигација</h2>
          
                 <p><a href="/">Почетна</a></p>
-                <p><a href="/">За Нас</a></p>
+                <p><a href="/#zanas">За Нас</a></p>
                 <p><a href="/menu">Мени</a></p>
        
               </div>
@@ -491,7 +494,7 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
 
                 <a
                   className={styles.FBSVG}
-                  href="https://www.instagram.com/lapizza_delivery_/"
+                  href="https://www.instagram.com/lapizzamk/?hl=en"
                   target="_blank"
                 >
                   <svg
