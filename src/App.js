@@ -1,8 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'; 
 import { HomePage } from './pages/HomePage/HomePage';  
-import MENU from './global/routes';
-import { Menu } from './pages/Menu/Menu';
+import { Menu1 } from './pages/Menu/Menu';
 
 const App = () => (
   <Router>
@@ -15,8 +14,8 @@ const App = () => (
       />
       <Route
         exact
-        path={MENU}
-        component={Menu}
+        path="/menu"
+        component={Menu1}
       />
       <Redirect to="/" />
     </Switch>
