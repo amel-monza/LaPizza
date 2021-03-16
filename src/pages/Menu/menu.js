@@ -30,8 +30,11 @@ import Menuprintpizza from './components/menuprintpizza';
 import Menuprintpastr from './components/menuprintpastr';
 import Menups from './components/menups';
 
-export const Menu = () => ( 
-  <>
+export const Menu = () => {
+
+  return (
+
+    <>
     <div className={styles.Container}>
       <div className={styles.Meni}>
       
@@ -401,4 +404,6 @@ export const Menu = () => (
     </div>
 
   </>
-);
+
+  )
+};
