@@ -37,6 +37,19 @@ export const HomePage = () => {
     pauseOnHover: false,
   };
 
+
+  window.onload = function () {
+   
+     if (navigator.userAgent.search("Firefox") >= 0) { 
+      document.getElementById('textsize').style.fontSize = "65px";
+      document.getElementById('textsize1').style.fontSize = "65px";
+      document.getElementById('textsize2').style.fontSize = "65px";
+     console.log(`Firefox`)
+   }
+  
+  }
+
+
   return (
     <>
   
@@ -85,7 +98,7 @@ export const HomePage = () => {
   
             <div className={styles.tekst10}>
    
-              <span className={styles.text1}>Добредојдовте во </span>
+              <span className={styles.text1} id="textsize">Добредојдовте во </span>
               <span className={styles.text2}>LaPizza!</span>
               <span className={styles.text3}>Добредојдовте во <span>LaPizza</span></span>
               <h4 className={styles.wordCarousel}>    
@@ -116,7 +129,7 @@ export const HomePage = () => {
           <div className={styles.test}>
            
             <div className={styles.tekst10}>
-              <span className={styles.text1}>Добредојдовте во </span>
+              <span className={styles.text1} id="textsize1">Добредојдовте во </span>
               <span className={styles.text2}>LaPizza!</span>
               <span className={styles.text3}>Добредојдовте во <span>LaPizza</span></span>
               <h4 className={styles.wordCarousel}>    
@@ -148,7 +161,7 @@ export const HomePage = () => {
           <div className={styles.test}>
        
             <div className={styles.tekst10}>
-              <span className={styles.text1}>Добредојдовте во </span>
+              <span className={styles.text1} id="textsize2">Добредојдовте во </span>
               <span className={styles.text2}>LaPizza!</span>
               <span className={styles.text3}>Добредојдовте во <span>LaPizza</span></span>
               <h4 className={styles.wordCarousel}>    
