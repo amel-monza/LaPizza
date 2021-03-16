@@ -13,12 +13,10 @@ import garlic from '../../images/garlic.png';
 import lettuce from '../../images/lettuce.png'; 
 import fb from '../../images/fb.png';
 import stars1 from '../../images/stars1.png'; 
-import styles from './styles.module.scss';
 import { Hamburger } from '../components/Hamburger';
- 
+import styles from './styles.module.scss';
 
 export const HomePage = () => {
-  
   
   const settings = {
     
@@ -30,18 +28,13 @@ export const HomePage = () => {
     pauseOnHover: false,
     
   };
-  
-
    
   const settingz = {
-    
     dots: true,
-    
     arrows: true,
     autoplay: false,
     duration: 100,
     pauseOnHover: false,
-    
   };
 
   return (
@@ -50,22 +43,37 @@ export const HomePage = () => {
       <div className={styles.divKlas}>
        
         <div className={styles.parentNav}>
-          <Hamburger true2={true}/>
+          <Hamburger true2 />
         </div>
         <header className={styles.parent}>
-        <a href="/" alt="lapizza">
-            <img src={logo2} alt="lapizza"/>
-            </a>
+          <a
+            href="/"
+            alt="lapizza"
+          >
+            <img
+              src={logo2}
+              alt="lapizza"
+            />
+          </a>
           <nav>
             <ul className={styles.UL}>
-              <li><a href="/" alt="la pizza skopje">Почетна</a></li>
-              <li><a href="/menu" alt="la pizza skopje">Мени</a></li>
-              <li><a href="#zanas" alt="la pizza skopje">За Нас</a></li>
+              <li><a
+                href="/"
+                alt="la pizza skopje"
+              >Почетна
+                  </a>
+              </li>
+              <li><a href="/menu"
+                alt="la pizza skopje"
+              >Мени
+                  </a>
+              </li>
+              <li><a href="#zanas" alt="la pizza skopje">За Нас
+                  </a>
+              </li>
                
             </ul>
-          </nav>
-          <a
-            className={styles.cta}
+          </nav><a className={styles.cta}
             href="#kontakt"
             alt="la pizza skopje"
           ><p>Контакт</p>
@@ -299,7 +307,8 @@ export const HomePage = () => {
                     rel="noopener noreferrer"
                     alt="Lapizza"
                     className={styles.Anch}
-                  ><span>LaPizza</span></a> 
+                  ><span>LaPizza</span>
+                  </a> 
                 </div>
                 <span className={styles.Opis}>"Одличен вкус со уште по прифатливи цени за обемот и исполнетоста на пиците и пастрмајлиите. Брза достава и љубезност од истата. Браво."</span>
                 <img
@@ -327,7 +336,8 @@ export const HomePage = () => {
                     rel="noopener noreferrer"
                     alt="Lapizza"
                     className={styles.Anch}
-                  ><span>LaPizza</span></a> 
+                  ><span>LaPizza</span>
+                  </a> 
                 </div>
                 <span className={styles.Opis}>"Одлична услуга, љубезен персонал и пристојни цени. Keep it going!"</span>
                 <img
@@ -354,7 +364,8 @@ export const HomePage = () => {
                     rel="noopener noreferrer"
                     alt="Lapizza"
                     className={styles.Anch}
-                  ><span>LaPizza</span></a> 
+                  ><span>LaPizza</span>
+                  </a> 
                 </div>
                 <span className={styles.Opis}>"Предобра пица, луѓето фини, брза достава, секоја чест."</span>
                 <img
@@ -376,7 +387,7 @@ export const HomePage = () => {
           <div className={styles.inline}>
             <div className={styles.GoogleMap}>
               <iframe
-              title="lapizza"
+                title="lapizza"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1763.5117076021638!2d21.46668074614379!3d41.98178661259898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135415a17af45a5f%3A0x36d4d68a7ac211f!2sLa%20Pizza%20Aerodrom%20-%20Pizza%20Delivery!5e0!3m2!1sen!2smk!4v1611716583601!5m2!1sen!2smk"
                 width="100%"
                 height="450"
@@ -391,9 +402,24 @@ export const HomePage = () => {
               <div className={styles.Navigacija}>
                 <h2>Навигација</h2>
          
-                <p><a href="/" alt="lapizza">Почетна</a></p>
-                <p><a href="#zanas" alt="lapizza">За Нас</a></p>
-                <p><a href="/menu" alt="lapizza">Мени</a></p>
+                <p><a
+                  href="/"
+                  alt="lapizza"
+                >Почетна
+                   </a>
+                </p>
+                <p><a
+                  href="#zanas"
+                  alt="lapizza"
+                >За Нас
+                   </a>
+                </p>
+                <p><a
+                  href="/menu"
+                  alt="lapizza"
+                >Мени
+                   </a>
+                </p>
        
               </div>
 

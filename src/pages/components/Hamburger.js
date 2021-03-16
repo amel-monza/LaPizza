@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import styles from './styles.module.scss';
 
-
-
-
 const StyledHamb = styled.div`
 width: 30px;
 height: 22.5px;
@@ -112,7 +109,6 @@ z-index: 57!important;
 visibility: ${props => (props.opened ? 'visible' : 'hidden')}
 `;
 
-
 const Parent = styled.div`
  
  
@@ -139,7 +135,7 @@ const Parent = styled.div`
       
      }
  }
-`
+`;
 
 const Active = styled.div`
  
@@ -147,10 +143,10 @@ const Active = styled.div`
   height: 50px;
   cursor: pointer;
   text-align: center;
-  background: ${props => props.true2 ? 'rgb(3, 202, 202)' : `transparent`};
+  background: ${props => (props.true2 ? 'rgb(3, 202, 202)' : 'transparent')};
   a{
    color: white;
-   opacity: ${props => props.true2 ? '1' : `0.7`};
+   opacity: ${props => (props.true2 ? '1' : '0.7')};
    height: 50px;
    font-size: 20px;
    line-height: 50px;
@@ -167,7 +163,7 @@ const Active = styled.div`
         opacity: 1;
       }
     }
-`
+`;
 
 const Active2 = styled.div`
  
@@ -175,10 +171,10 @@ const Active2 = styled.div`
   height: 50px;
   cursor: pointer;
   text-align: center;
-  background: ${props => props.true3 ? 'rgb(3, 202, 202)' : `transparent`};
+  background: ${props => (props.true3 ? 'rgb(3, 202, 202)' : 'transparent')};
   a{
    color: white;
-   opacity: ${props => props.true3 ? '1' : `0.7`};
+   opacity: ${props => (props.true3 ? '1' : '0.7')};
    height: 50px;
    font-size: 20px;
    line-height: 50px;
@@ -195,9 +191,9 @@ const Active2 = styled.div`
       opacity: 1;
     }
   }
-`
+`;
 
-export const Hamburger = ({opened, clicked, true3, true2}) => {
+export const Hamburger = ({ true3, true2 }) => {
 
   const [state, setState] = useState({
     isNavBarOpen: false,
@@ -208,39 +204,50 @@ export const Hamburger = ({opened, clicked, true3, true2}) => {
     
   };
 
-   
-
-    return (
-        <div>
-             <MeniQuit onClick={OpenCloseNavbar} opened={state.isNavBarOpen}/>
-         <MeniLow opened={state.isNavBarOpen}>
-           <div className={styles.smParent}>
-             <Active true2={true2}>
-               <a
-                 href="/"
-                 alt="LaPizza"
-               >Почетна
-               </a>
-             </Active>
-             <Active2 true3={true3}>
-               <a
-                 href="/menu"
-                 alt="LaPizza"
-               >Мени
-               </a>
-             </Active2>
-             <Parent onClick={OpenCloseNavbar} opened={state.isNavBarOpen}>
-               <a href="#kontakt" alt="LaPizza">Контакт</a>
-             </Parent>
-           </div>
-         </MeniLow>
-         <StyledHamb onClick={OpenCloseNavbar} opened={state.isNavBarOpen}>
-           <span />
-           <span />
-           <span />
-           <span />
-         </StyledHamb>
+  return (
+    <div>
+      <MeniQuit
+        onClick={OpenCloseNavbar}
+        opened={state.isNavBarOpen}
+      />
+      <MeniLow opened={state.isNavBarOpen}>
+        <div className={styles.smParent}>
+          <Active true2={true2}>
+            <a
+              href="/"
+              alt="LaPizza"
+            >Почетна
+            </a>
+          </Active>
+          <Active2 true3={true3}>
+            <a
+              href="/menu"
+              alt="LaPizza"
+            >Мени
+            </a>
+          </Active2>
+          <Parent
+            onClick={OpenCloseNavbar}
+            opened={state.isNavBarOpen}
+          >
+            <a
+              href="#kontakt"
+              alt="LaPizza"
+            >Контакт
+            </a>
+          </Parent>
         </div>
-    )
-}
+      </MeniLow>
+      <StyledHamb
+        onClick={OpenCloseNavbar}
+        opened={state.isNavBarOpen}
+      >
+        <span />
+        <span />
+        <span />
+        <span />
+      </StyledHamb>
+    </div>
+  );
+};
 

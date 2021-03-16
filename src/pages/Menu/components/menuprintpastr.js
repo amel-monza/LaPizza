@@ -4,7 +4,10 @@ import styles from './styles.module.scss';
 const Menuprintpastr = ({ img, names, sostav, price }) => (
   
   <div className={styles.first}>
-    <img src={img} alt="LaPizza Skopje" />
+    <img
+      src={img}
+      alt="LaPizza Skopje"
+    />
     <span className={styles.peperoni}>{names}</span>
     <span className={styles.Span2}>{sostav}</span>
     <div className={styles.divPastr3}>
