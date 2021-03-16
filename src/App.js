@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'; 
 import { HomePage } from './pages/HomePage/HomePage';  
-import { Menu1 } from './pages/Menu/Menu';
+import { Menu1 } from './pages/Menu/Menus';
 
 const App = () => (
   <Router>
