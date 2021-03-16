@@ -12,11 +12,7 @@ const App = () => (
         path="/"
         component={HomePage}
       />
-      <Route
-        exact
-        path="/menu"
-        component={Menu}
-      />
+      
       <Redirect to="/" />
     </Switch>
  
