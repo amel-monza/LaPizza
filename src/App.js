@@ -1,15 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import { store } from 'store';
-import { HomePage } from 'pages/HomePage';
-import { HOME_PAGE, MENU } from 'global/routes';
-
-import { Provider } from 'react-redux'; 
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'; 
+import { HomePage } from 'pages/HomePage/HomePage';  
 import { Menu } from 'pages/Menu/menu';
 
 const App = () => (
   <Router>
-    <Provider store={store}>
+    
       <Switch>
         <Route
           exact
@@ -23,7 +19,7 @@ const App = () => (
         />
         <Redirect to="/" />
       </Switch>
-    </Provider>
+ 
   </Router>
 );
 

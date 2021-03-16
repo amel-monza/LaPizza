@@ -1,7 +1,5 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import logo2 from '../../images/logo2.png';
-import pizza from '../../images/pizza.png';
+import React from 'react'; 
+import logo2 from '../../images/logo2.png'; 
 import pizza2 from '../../images/pizza2.png';
 import margarita from '../../images/margarita.png';
 import prshuto from '../../images/prshuto1.png';
@@ -27,127 +25,13 @@ import stipska from '../../images/stipska.png';
 import pileska from '../../images/pileska.png';
 import menipdf from '../../images/menipdf.pdf';
 import styles from './styles.module.scss';
-import Menuprintpizza from './print/menuprintpizza';
-import Menuprintpastr from './print/menuprintpastr';
-import Menups from './print/menups';
+import Menuprintpizza from './components/menuprintpizza';
+import Menuprintpastr from './components/menuprintpastr';
+import Menups from './components/menups';
+import { Hamburger } from '../components/Hamburger';
 
 export const Menu = () => { 
 
-  const [state, setState] = useState({
-    isNavBarOpen: false,
-  });
-  
-  const OpenCloseNavbar = () => {
-    setState({ isNavBarOpen: !state.isNavBarOpen });
-    
-  };
-  
-  const StyledHamb = styled.div`
-  width: 30px;
-  height: 22.5px;
-  padding: 1rem;
-  
-  transform: rotate(0deg);
-  transition: 0.5s ease-in-out;
-  cursor: pointer;
-  pointer-events: auto;
-  
-  
-  
-    z-index: 59 !important;
-    position: fixed;
-     
-    
-     
-    right: 20px;
-    
-    text-align: center;
-    top: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 10px;
-    background: transparent;
-    
-  
-  & span {
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background:  rgb(3, 202, 202); 
-    border-radius: 5px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: 0.25s ease-in-out;
-  
-    &:nth-child(1) {
-      top: ${state.isNavBarOpen ? '9px' : '0px'};
-      width: ${state.isNavBarOpen ? '0%' : '100%'};
-      left: ${state.isNavBarOpen ? '50%' : null};
-    }
-  
-    &:nth-child(2) {
-      transform: ${state.isNavBarOpen ? 'rotate(45deg)' : null};
-    }
-  
-    &:nth-child(3) {
-      transform: ${state.isNavBarOpen ? 'rotate(-45deg)' : null};
-    }
-  
-    &:nth-child(2),
-    &:nth-child(3) {
-      top: 9px;
-    }
-  
-    &:nth-child(4) {
-      top: ${state.isNavBarOpen ? '9px' : '18px'};
-      width: ${state.isNavBarOpen ? '0%' : '100%'};
-      left: ${state.isNavBarOpen ? '50%' : null};
-    }
-  }
-  
-  
-  @media only screen and (min-width: 890px) {
-     display: none;
-  }
-  `;
-  
-  const MeniLow = styled.div`
-  width: 70%;
-  height: 100vh;
-  background: #312c2b;
-  position: fixed;
-  right:0;
-  z-index: 58!important;
-  
-  pointer-events: auto;
-  align-items: center;
-  
-  
-  
-  
-  @media only screen and (min-width: 500px) {
-  width: 300px;
-  }
-  @media only screen and (min-width: 890px) {
-  display: none;
-  }
-  
-  visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
-  `;
-
-  const MeniQuit = styled.div`
-width: 100%;
-height: 100vh;
-position: fixed;
-right:0;
-pointer-events:auto; 
-background:transparent;
-z-index: 57!important;
-visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
-`;
   
   return ( 
     <>
@@ -155,38 +39,11 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
         <div className={styles.Meni}>
       
           <div className={styles.parentNav}>
-            <MeniQuit onClick={OpenCloseNavbar} />
-            <MeniLow>
-              <div className={styles.smParent}>
-                <div className={styles.smNav}>
-                  <a
-                    href="/"
-                    alt="na"
-                  >Почетна
-                  </a>
-                </div>
-                <div className={styles.smNav1}>
-                  <a
-                    href="/menu"
-                    alt="na"
-                  >Мени
-                  </a>
-                </div>
-                <div className={styles.smNav2} onClick={OpenCloseNavbar}>
-                  <a href="#kontakt">Контакт</a>
-                </div>
-              </div>
-            </MeniLow>
-            <StyledHamb onClick={OpenCloseNavbar}>
-              <span />
-              <span />
-              <span />
-              <span />
-            </StyledHamb>
+            <Hamburger true3={true}/>
           </div>
           <header className={styles.parent}>
-            <a href="/">
-            <img src={logo2} />
+            <a href="/" alt="LaPizza">
+            <img src={logo2} alt="LaPizza"/>
             </a>
             <nav>
               <ul className={styles.UL}>
@@ -199,6 +56,7 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
             <a
               className={styles.cta}
               href="#kontakt"
+              alt="LaPizza"
             ><p>Контакт</p>
             </a>
           </header>
@@ -234,6 +92,8 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
             href={menipdf}
             download="Menu"
             target="_blank"
+            rel="noopener noreferrer"
+            alt="LaPizza"
           >Превземи мени во PDF формат.
           </a>
         </div>
@@ -440,6 +300,7 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
           <div className={styles.inline}>
             <div className={styles.GoogleMap}>
               <iframe
+              title="LaPizza"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1763.5117076021638!2d21.46668074614379!3d41.98178661259898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135415a17af45a5f%3A0x36d4d68a7ac211f!2sLa%20Pizza%20Aerodrom%20-%20Pizza%20Delivery!5e0!3m2!1sen!2smk!4v1611716583601!5m2!1sen!2smk"
                 width="100%"
                 height="450"
@@ -454,9 +315,9 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
               <div className={styles.Navigacija}>
                 <h2>Навигација</h2>
          
-                <p><a href="/">Почетна</a></p>
-                <p><a href="/#zanas">За Нас</a></p>
-                <p><a href="/menu">Мени</a></p>
+                <p><a href="/" alt="La pizza">Почетна</a></p>
+                <p><a href="/#zanas" alt="La pizza">За Нас</a></p>
+                <p><a href="/menu" alt="La pizza">Мени</a></p>
        
               </div>
 
@@ -470,6 +331,7 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
                   className={styles.FBSVG}
                   href="https://www.facebook.com/lapizzaskopje/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 ><svg
                   aria-hidden="true"
                   focusable="false"
@@ -490,6 +352,7 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
                   className={styles.FBSVG}
                   href="https://www.instagram.com/lapizzamk/?hl=en"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <svg
                     height="50px"

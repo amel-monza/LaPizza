@@ -1,12 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { useUser } from 'services/users/user/hook';
+import React from 'react'; 
 import Slider from 'infinite-react-carousel';
-import './style.css';
-import styled from 'styled-components';
-import logo from '../../images/logo.jpg';
+import './style.css'; 
 import logo2 from '../../images/logo2.png';
-import sostojki from '../../images/sostojki.png';
-import sostojki1 from '../../images/sostojki1.png';
+import sostojki from '../../images/sostojki.png'; 
 import dostava from '../../images/dostava.png';
 import family from '../../images/family.png';
 import zanas from '../../images/zanas.png';
@@ -14,15 +10,15 @@ import divider from '../../images/divider.png';
 import mushroom from '../../images/mushroom.png';
 import tomato from '../../images/tomato.png';
 import garlic from '../../images/garlic.png';
-import lettuce from '../../images/lettuce.png';
-import klienti from '../../images/klienti.jpg';
+import lettuce from '../../images/lettuce.png'; 
 import fb from '../../images/fb.png';
-import stars1 from '../../images/stars1.png';
-import facebook from '../../images/facebook-brands.svg';
+import stars1 from '../../images/stars1.png'; 
 import styles from './styles.module.scss';
+import { Hamburger } from '../components/Hamburger';
+ 
 
 export const HomePage = () => {
-  const { getUser, user, loading } = useUser();
+  
   
   const settings = {
     
@@ -34,122 +30,9 @@ export const HomePage = () => {
     pauseOnHover: false,
     
   };
-  const [state, setState] = useState({
-    isNavBarOpen: false,
-  });
-
-  const OpenCloseNavbar = () => {
-    setState({ isNavBarOpen: !state.isNavBarOpen });
-    
-  };
-
-  const StyledHamb = styled.div`
-  width: 30px;
-  height: 22.5px;
-  padding: 1rem;
- 
-  transform: rotate(0deg);
-  transition: 0.5s ease-in-out;
-  cursor: pointer;
-  pointer-events: auto;
-
-
   
-    z-index: 59 !important;
-    position: fixed;
-     
-    
-     
-    right: 20px;
-    
-    text-align: center;
-    top: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 10px;
-    background: transparent;
-    
 
-  & span {
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background:  rgb(3, 202, 202); 
-    border-radius: 5px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: 0.25s ease-in-out;
-
-    &:nth-child(1) {
-      top: ${state.isNavBarOpen ? '9px' : '0px'};
-      width: ${state.isNavBarOpen ? '0%' : '100%'};
-      left: ${state.isNavBarOpen ? '50%' : null};
-    }
-
-    &:nth-child(2) {
-      transform: ${state.isNavBarOpen ? 'rotate(45deg)' : null};
-    }
-
-    &:nth-child(3) {
-      transform: ${state.isNavBarOpen ? 'rotate(-45deg)' : null};
-    }
-
-    &:nth-child(2),
-    &:nth-child(3) {
-      top: 9px;
-    }
-
-    &:nth-child(4) {
-      top: ${state.isNavBarOpen ? '9px' : '18px'};
-      width: ${state.isNavBarOpen ? '0%' : '100%'};
-      left: ${state.isNavBarOpen ? '50%' : null};
-    }
-  }
-
-
-  @media only screen and (min-width: 890px) {
-     display: none;
-  }
-`;
-
-  const MeniLow = styled.div`
-width: 70%;
-height: 100vh;
-background: #312c2b;
-position: fixed;
-right:0;
-z-index: 58!important;
- 
-pointer-events: auto;
-align-items: center;
- 
-
- 
-
-@media only screen and (min-width: 500px) {
-  width: 300px;
-}
-@media only screen and (min-width: 890px) {
-  display: none;
-}
-
-visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
-`;
-
-  const MeniQuit = styled.div`
-width: 100%;
-height: 100vh;
-position: fixed;
-right:0;
-pointer-events:auto; 
-background:transparent;
-z-index: 57!important;
-visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
-`;
-  console.log(state.isNavBarOpen);
+   
   const settingz = {
     
     dots: true,
@@ -167,50 +50,24 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
       <div className={styles.divKlas}>
        
         <div className={styles.parentNav}>
-          <MeniQuit onClick={OpenCloseNavbar} />
-          <MeniLow>
-            <div className={styles.smParent}>
-              <div className={styles.smNav}>
-                <a
-                  href="/menu"
-                  alt="na"
-                >Почетна
-                </a>
-              </div>
-              <div className={styles.smNav1}>
-                <a
-                  href="/menu"
-                  alt="na"
-                >Мени
-                </a>
-              </div>
-              <div className={styles.smNav2} onClick={OpenCloseNavbar}>
-                <a href="#kontakt">Контакт</a>
-              </div>
-            </div>
-          </MeniLow>
-          <StyledHamb onClick={OpenCloseNavbar}>
-            <span />
-            <span />
-            <span />
-            <span />
-          </StyledHamb>
+          <Hamburger true2={true}/>
         </div>
         <header className={styles.parent}>
-        <a href="/">
-            <img src={logo2} />
+        <a href="/" alt="lapizza">
+            <img src={logo2} alt="lapizza"/>
             </a>
           <nav>
             <ul className={styles.UL}>
-              <li><a href="/">Почетна</a></li>
-              <li><a href="/menu">Мени</a></li>
-              <li><a href="#zanas">За Нас</a></li>
+              <li><a href="/" alt="la pizza skopje">Почетна</a></li>
+              <li><a href="/menu" alt="la pizza skopje">Мени</a></li>
+              <li><a href="#zanas" alt="la pizza skopje">За Нас</a></li>
                
             </ul>
           </nav>
           <a
             className={styles.cta}
             href="#kontakt"
+            alt="la pizza skopje"
           ><p>Контакт</p>
           </a>
         </header>
@@ -242,6 +99,7 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
               <a
                 href="menu"
                 className={styles.MenuHref}
+                alt="la pizza skopje"
               > <p>Мени  </p>
               </a>
             </div>
@@ -271,6 +129,7 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
               <a
                 href="menu"
                 className={styles.MenuHref}
+                alt="la pizza skopje"
               > <p>Мени  </p>
               </a>
             </div>
@@ -302,6 +161,7 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
               <a
                 href="menu"
                 className={styles.MenuHref}
+                alt="la pizza skopje"
               > <p>Мени  </p>
               </a>
             </div>
@@ -317,22 +177,22 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
         <img
           src={mushroom}
           className={styles.mushroom}
-          alt="mushroom"
+          alt="la pizza skopje"
         />
         <img
           src={tomato}
           className={styles.tomato}
-          alt="tomato"
+          alt="la pizza skopje"
         />
         <img
           src={garlic}
           className={styles.garlic}
-          alt="garlic"
+          alt="la pizza skopje"
         />
         <img
           src={lettuce}
           className={styles.lettuce}
-          alt="lettuce"
+          alt="la pizza mk"
         />
         <div className={styles.ZostoLa}>
           <div
@@ -342,13 +202,13 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
             <img
               className={styles.ZsLaImg}
               src={zanas}
-              alt="zanas"
+              alt="la pizza mk"
             />
             <div className={styles.ZostoContainer}>
               <div className={styles.Conta}> <span className={styles.ZostoLaTekst}>За Нас</span></div>
               <div className={styles.Contas}> <img
                 src={divider}
-                alt="divider"
+                alt="la pizza mk"
               />
               </div>
   
@@ -378,7 +238,7 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
             <img
               className={styles.sstj}
               src={sostojki}
-              alt="sostojki"
+              alt="la pizza mk"
             />
             <div className={styles.sstDef}>
               <span className={styles.SostojkiNaslov}>Квалитет</span>
@@ -392,7 +252,7 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
             <img
               className={styles.sstj}
               src={dostava}
-              alt="dostava"
+              alt="la pizza"
             />
             <div className={styles.sstDef}>
               <span className={styles.SostojkiNaslov}>Брза достава</span>
@@ -407,7 +267,7 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
             <img
               className={styles.sstj}
               src={family}
-              alt="family"
+              alt="la pizza"
             />
             <div className={styles.sstDef}>
               <span className={styles.SostojkiNaslov}>Посветеност</span>
@@ -430,17 +290,21 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
                 <div className={styles.LaPizzaFb}>
                   <img
                     src={fb}
-                    alt="hh"
+                    alt="la pizza"
+
                   />
                   <a
                     href="https://www.facebook.com/permalink.php?story_fbid=146958336732266&id=100042543022352"
                     target="_blank"
-                  /> 
+                    rel="noopener noreferrer"
+                    alt="Lapizza"
+                    className={styles.Anch}
+                  ><span>LaPizza</span></a> 
                 </div>
                 <span className={styles.Opis}>"Одличен вкус со уште по прифатливи цени за обемот и исполнетоста на пиците и пастрмајлиите. Брза достава и љубезност од истата. Браво."</span>
                 <img
                   src={stars1}
-                  alt="hh"
+                  alt="la pizza"
                   className={styles.Stars}
                 />
                 <span className={styles.Nickname}>Госпожа Ѓорѓиќ</span>
@@ -455,17 +319,20 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
                 <div className={styles.LaPizzaFb}>
                   <img
                     src={fb}
-                    alt="hh"
+                    alt="la pizza"
                   />
                   <a
                     href="https://www.facebook.com/DuleAeroporto/posts/10216959615606614"
                     target="_blank"
-                  /> 
+                    rel="noopener noreferrer"
+                    alt="Lapizza"
+                    className={styles.Anch}
+                  ><span>LaPizza</span></a> 
                 </div>
                 <span className={styles.Opis}>"Одлична услуга, љубезен персонал и пристојни цени. Keep it going!"</span>
                 <img
                   src={stars1}
-                  alt="hh"
+                  alt="la pizza"
                   className={styles.Stars}
                 />
                 <span className={styles.Nickname}>Trajkovski Dule</span>
@@ -479,17 +346,20 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
                 <div className={styles.LaPizzaFb}>
                   <img
                     src={fb}
-                    alt="hh"
+                    alt="lapizza"
                   />
                   <a
                     href="https://www.facebook.com/druid.mali/posts/10205978209730928"
                     target="_blank"
-                  /> 
+                    rel="noopener noreferrer"
+                    alt="Lapizza"
+                    className={styles.Anch}
+                  ><span>LaPizza</span></a> 
                 </div>
                 <span className={styles.Opis}>"Предобра пица, луѓето фини, брза достава, секоја чест."</span>
                 <img
                   src={stars1}
-                  alt="hh"
+                  alt="lapizza"
                   className={styles.Stars}
                 />
                 <span className={styles.Nickname}>Andrej Arsovski</span>
@@ -506,6 +376,7 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
           <div className={styles.inline}>
             <div className={styles.GoogleMap}>
               <iframe
+              title="lapizza"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1763.5117076021638!2d21.46668074614379!3d41.98178661259898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135415a17af45a5f%3A0x36d4d68a7ac211f!2sLa%20Pizza%20Aerodrom%20-%20Pizza%20Delivery!5e0!3m2!1sen!2smk!4v1611716583601!5m2!1sen!2smk"
                 width="100%"
                 height="450"
@@ -520,9 +391,9 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
               <div className={styles.Navigacija}>
                 <h2>Навигација</h2>
          
-                <p><a href="/">Почетна</a></p>
-                <p><a href="#zanas">За Нас</a></p>
-                <p><a href="/menu">Мени</a></p>
+                <p><a href="/" alt="lapizza">Почетна</a></p>
+                <p><a href="#zanas" alt="lapizza">За Нас</a></p>
+                <p><a href="/menu" alt="lapizza">Мени</a></p>
        
               </div>
 
@@ -536,6 +407,8 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
                   className={styles.FBSVG}
                   href="https://www.facebook.com/lapizzaskopje/"
                   target="_blank"
+                  alt="lapizza"
+                  rel="noopener noreferrer"
                 ><svg
                   aria-hidden="true"
                   focusable="false"
@@ -556,6 +429,8 @@ visibility: ${state.isNavBarOpen ? 'visible' : 'hidden'}
                   className={styles.FBSVG}
                   href="https://www.instagram.com/lapizzamk/?hl=en"
                   target="_blank"
+                  alt="lapizza"
+                  rel="noopener noreferrer"
                 >
                   <svg
                     height="50px"
